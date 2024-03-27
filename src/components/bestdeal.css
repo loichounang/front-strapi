@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+
+.best-offers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Alignement horizontal des cartes */
+    background-color: #F7F7F7; /* Fond bleu */
+    padding: 20px; /* Marge intérieure */
+    margin-top: 30px;
+   
+  }
+  
+  .cards {
+    width: 350px;
+    margin-bottom: 20px; /* Espacement entre les cartes */
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: color 0.3s;
+   
+   
+  }
+  
+  .cards:hover {
+    background-color: #FEB8E6; /* Rose léger au survol */
+    color: #fff;
+  }
+  
+  
+  .card-header-image {
+    width: 300px; /* Taille de l'image */
+    height: 300px; /* Taille de l'image */
+    border-radius: 50%; /* Image circulaire */
+    margin: auto; /* Centre l'image horizontalement et verticalement */
+    display: block; /* Pour assurer que la marge automatique fonctionne */
+    
+  }
+  
+  .card-content {
+    flex-grow: 1; /* Permet au contenu de prendre toute la hauteur restante */
+    
+  }
+  
+  .button {
+    width: 70%;
+    background-color: #EA489E !important; /* Couleur du bouton */
+    color: white !important; /* Couleur du texte */
+    border: none;
+    border-radius: 12px;
+   margin-left: 33px !important;
+   height: 60px;
+   font-family: 'Poppins', sans-serif;
+   transition: color 0.3s;
+  }
+  
+
+/* Media queries pour les tailles d'écran plus petites */
+@media (max-width: 768px) {
+  .best-offers {
+    justify-content: center; /* Centrer les cartes horizontalement */
+  }
+
+  .card {
+    width: calc(70% - 20px); /* Utiliser 50% de la largeur disponible pour chaque carte sur les écrans plus petits */
+   
+  }
+  .button {
+    width: 100%;
+    background-color: #EA489E !important; /* Couleur du bouton */
+    color: white !important; /* Couleur du texte */
+    border: none;
+    border-radius: 8px;
+    margin-left: 0px !important;
+    height: 60px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s;
+  
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 20px); /* Utiliser 100% de la largeur disponible pour chaque carte sur les écrans très petits */
+  }
+}
+
+
+

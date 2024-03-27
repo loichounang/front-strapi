@@ -1,0 +1,6 @@
+.slide {
+    width: 100%; /* ou la largeur souhaitée */
+    height: 560px;
+    object-fit: cover; /* Utiliser 'contain' au lieu de 'cover' */
+    overflow: visible;
+}
