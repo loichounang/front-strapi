@@ -1,0 +1,1836 @@
+
+
+{
+    "common" : {
+ 
+		"Signin": "Sign in",		      
+ 
+		"Last Name": "Last Name",		      
+ 
+		"First Name": "First Name",		      
+ 
+		"Payor Last Name": "Payor Last Name",		      
+ 
+		"Payor First Name": "Payor First Name",		      
+ 
+		"Role": "Role",		      
+ 
+		"User": "User",		      
+ 
+		"Agency": "Agency",		      
+ 
+		"Person": "Person",		      
+ 
+		"Contract": "Contract",		      
+ 
+		"GroupPolicy": "Group Policy",		      
+ 
+		"Sex": "Sex",		      
+ 
+		"Code": "Code",		      
+ 
+		"Coverage": "Coverage",		      
+ 
+		"Capital": "Capital",		      
+ 
+		"Capital_Rec": "Arrears",		      
+ 
+		"Base_Premium": "Base Premium",		      
+ 
+		"Net_Premium": "Net Premium",		      
+ 
+		"Tax": "Tax",		      
+ 
+		"Due_Premium": "Due Premium",		      
+ 
+		"Account_Number": "Account Number",		      
+ 
+		"Loan_Number": "Loan Number",		      
+ 
+		"LineOfBusiness": "Line Of Business",		      
+ 
+		"Name": "Name",		      
+ 
+		"EffectiveDate": "Effective Date",		      
+ 
+		"ExpirationDate": "Expiration Date",		      
+ 
+		"IssueDate": "Issue Date",		      
+ 
+		"Product": "Product",		      
+ 
+		"Products": "Products",		      
+ 
+		"Agencies": "Agencies",		      
+ 
+		"Propositions": "Propositions",		      
+ 
+		"PolicyID": "Policy ID",		      
+ 
+		"ManualNumber": "Manual Number",		      
+ 
+		"ValidationNumber": "Validation Number",		      
+ 
+		"ContractNumber": "Contract Number",		      
+ 
+		"ExternalNumber": "External Number",		      
+ 
+		"PersonNameNIC": "Full Name",		      
+ 
+		"PayorPersonNameNIC": "Payor Full Name",		      
+ 
+		"_Operation_done": "Operation done",		      
+ 
+		"_Evaluation_done": "Evaluation done",		      
+ 
+		"Login": "Login",		      
+ 
+		"Password": "Password",		      
+ 
+		"Partner": "Partner",		      
+ 
+		"BankPolicy": "Bank Policy",		      
+ 
+		"Status": "Status",		      
+ 
+		"Civility": "Civility",		      
+ 
+		"Mat. Sit.": "Mat. Sit.",		      
+ 
+		"Language": "Language",		      
+ 
+		"BirthPlace": "Birth Place",		      
+ 
+		"Portable1": "Portable 1",		      
+ 
+		"Portable2": "Portable 2",		      
+ 
+		"Email1": "Email 1",		      
+ 
+		"Email2": "Email 2",		      
+ 
+		"PayorCivility": "Payor Civility",		      
+ 
+		"Payor Mat. Sit.": "Payor Mat. Sit.",		      
+ 
+		"PayorBirthPlace": "Birth Place",		      
+ 
+		"LoanDate": "Loan Date",		      
+ 
+		"SetupDate": "Setup Date",		      
+ 
+		"PaymentFrequency": "Payment Frequency",		      
+ 
+		"PaymentDuration": "Payment Duration",		      
+ 
+		"PaymentDurationYear": "Pay. Dur. Year",		      
+ 
+		"Reimb. Start Date": "Reimb. Start Date",		      
+ 
+		"Duration(Month)": "Duration(Month)",		      
+ 
+		"Reimb. End Date": "Reimb. End Date",		      
+ 
+		"Accessories": "Accessories",		      
+ 
+		"Acc. Tax": "Acc. Tax",		      
+ 
+		"Due_Amount": "Total Amount",		      
+ 
+		"Coverage(s)": "Coverage(s)",		      
+ 
+		"Select Coverage(s)": "Select Coverage(s)",		      
+ 
+		"BankGroupPolicy": "Group Policy",		      
+ 
+		"BankRole": "Role",		      
+ 
+		"BankUser": "User",		      
+ 
+		"ID": "ID",		      
+ 
+		"Select User": "Select User",		      
+ 
+		"Select Role": "Select Role",		      
+ 
+		"Roles": "Roles",		      
+ 
+		"Group Policies": "Group Policies",		      
+ 
+		"Users": "Users",		      
+ 
+		"Description": "Description",		      
+ 
+		"Service": "Service",		      
+ 
+		"Email": "Email",		      
+ 
+		"Password Confirm": "Password Confirm",		      
+ 
+		"Start Date": "Start Date",		      
+ 
+		"End Date": "End Date",		      
+ 
+		"Logout": "Logout",		      
+ 
+		"Change Password": "Change Password",		      
+ 
+		"Create": "Create",		      
+ 
+		"Retreive": "Retreive",		      
+ 
+		"Update": "Update",		      
+ 
+		"Print": "Print",		      
+ 
+		"MergeDoc": "MergeDoc",		      
+ 
+		"AttachDoc": "AttachDoc",		      
+ 
+		"Workflow": "Workflow",		      
+ 
+		"Authorize": "Authorize",		      
+ 
+		"Birth Date": "Birth Date",		      
+ 
+		"Password and confirmation are not the same": "Password and confirmation are not the same",		      
+ 
+		"Invalid user credential": "Invalid user credential",		      
+ 
+		"Current Password": "Current Password",		      
+ 
+		"New Password": "New Password",		      
+ 
+		"Confirm Password": "Confirm Password",		      
+ 
+		"ChangePassword": "Change password",		      
+ 
+		"Birth Year": "Birth Year",		      
+ 
+		"Birth Month": "Birth Month",		      
+ 
+		"Created by me": "Created by me",		      
+ 
+		"Updated by me": "Updated by me",		      
+ 
+		"All": "All",		      
+ 
+		"Not validated": "Not validated",		      
+ 
+		"Validated": "Validated",		      
+ 
+		"Transmited ?": "Transmited ?",		      
+ 
+		"Eff. Date Start": "Eff. Date Start",		      
+ 
+		"Eff. Date End": "Eff. Date End",		      
+ 
+		"Unvalidated policies": "Unvalidated policies",		      
+ 
+		"Validated policies": "Validated policies",		      
+ 
+		"Status Date": "Status Date",		      
+ 
+		"AdressLine1": "Adress Line 1",		      
+ 
+		"AdressLine2": "Adress Line 2",		      
+ 
+		"ProfessionalCategory": "Professional Category",		      
+ 
+		"Profession": "Profession",		      
+ 
+		"Height": "Height",		      
+ 
+		"Weight": "Weight",		      
+ 
+		"Select Person": "Select Person",		      
+ 
+		"Edit Person": "Edit Person",		      
+ 
+		"Select Action": "Select Action",		      
+ 
+		"Actions": "Actions",		      
+ 
+		"Parameters": "Parameters",		      
+ 
+		"Select Report": "Select Report",		      
+ 
+		"Reports": "Reports",		      
+ 
+		"Templ. Docs": "Templ. Docs",		      
+ 
+		"Printing": "Printing",		      
+ 
+		"Cancel": "Cancel",		      
+ 
+		"Select Functionalities": "Select Functionalities",		      
+ 
+		"Functionalities": "Functionalities",		      
+ 
+		"Turn Over": "Turn Over",		      
+ 
+		"Production count per agency": "Production count per agency",		      
+ 
+		"Unvalidated": "Unvalidated",		      
+ 
+		"Transmited": "Transmited",		      
+ 
+		"Payment duration is not define": "Payment duration is not define",		      
+ 
+		"Payment frequency is not define": "Payment frequency is not define",		      
+ 
+		"You can not access data for this agency": "You can not access data for this agency",		      
+ 
+		"Select ALL": "Select ALL",		      
+ 
+		"Unselect ALL": "Unselect ALL",		      
+ 
+		"Invert Selection": "Invert Selection",		      
+ 
+		"There is an ongoing operation": "There is an ongoing operation",		      
+ 
+		"Simulation": "Simulation",		      
+ 
+		"Category": "Category",		      
+ 
+		"Duration": "Duration",		      
+ 
+		"Unit": "Unit",		      
+ 
+		"Ageing": "Ageing",		      
+ 
+		"Close": "Close",		      
+ 
+		"OK": "OK",		      
+ 
+		"Coverage_s Options": "Coverage's Options",		      
+ 
+		"Portfolio": "Portfolio",		      
+ 
+		"Current": "Current",		      
+ 
+		"Proposition": "Proposition",		      
+ 
+		"Surrendered": "Surrendered",		      
+ 
+		"Maturity": "Maturity",		      
+ 
+		"Claimed": "Claimed",		      
+ 
+		"Cancelled": "Cancelled",		      
+ 
+		"Policy": "Policy",		      
+ 
+		"PaymentMode": "Payment Mode",		      
+ 
+		"PaymentModeReference": "Pay. Mode Ref.",		      
+ 
+		"PaymentModeNumber": "Pay. Mode Num.",		      
+ 
+		"StartPaymentDateAuto": "Start Auto. Pr.",		      
+ 
+		"IsACKReturnSigned": "Ack. Sig. ?",		      
+ 
+		"ACKReturnDate": "Ack Date",		      
+ 
+		"IsContractReturnSigned": "Cont. Sig. ?",		      
+ 
+		"ContractReturnDate": "Return Date",		      
+ 
+		"CurrentRiskElement": "Current Risk Elt.",		      
+ 
+		"Relation": "Relation",		      
+ 
+		"RelationOf": "Relation Of",		      
+ 
+		"Intermediary": "Intermediary",		      
+ 
+		"Agent": "Agent",		      
+ 
+		"Id": "Id",		      
+ 
+		"Children": "Childs",		      
+ 
+		"Father id": "Father id",		      
+ 
+		"Father name": "Father name",		      
+ 
+		"Mother id": "Mother id",		      
+ 
+		"Mother name": "Mother name",		      
+ 
+		"Conjoint id": "Conjoint id",		      
+ 
+		"Conjoint Name": "Conjoint name",		      
+ 
+		"User Name": "User Name",		      
+ 
+		"Technician Owned Name": "Technician owned",		      
+ 
+		"Owner technicians": "Owner technicians",		      
+ 
+		"Enumeration Ex": "Enumeration Ex",		      
+ 
+		"Extensions": "Extensions",		      
+ 
+		"Items": "Items",		      
+ 
+		"Tasks": "Tasks",		      
+ 
+		"Resources": "Resources",		      
+ 
+		"Technicians": "Technicians",		      
+ 
+		"Details": "Details",		      
+ 
+		"Issue date": "Issue date",		      
+ 
+		"Customer name": "Customer name",		      
+ 
+		"Reference": "Reference",		      
+ 
+		"Status date": "Status date",		      
+ 
+		"Status purpose": "Status purpose",		      
+ 
+		"Net amount": "Net amount",		      
+ 
+		"Tax1": "Tax 1",		      
+ 
+		"Tax2": "Tax 2",		      
+ 
+		"Tax3": "Tax 3",		      
+ 
+		"Due amount": "Due amount",		      
+ 
+		"Amount paid": "Amount paid",		      
+ 
+		"Unpaid amount": "Unpaid amount",		      
+ 
+		"Full name": "Full name",		      
+ 
+		"Options": "Options",		      
+ 
+		"Part": "Part",		      
+ 
+		"Differential": "Differential",		      
+ 
+		"Goods and Services": "Goods and Services",		      
+ 
+		"Article": "Article",		      
+ 
+		"Tarification": "Tarification",		      
+ 
+		"Sharing": "Sharing",		      
+ 
+		"Sharing - Cions": "Sharing - Cions",		      
+ 
+		"Price expression": "Price expression",		      
+ 
+		"Type": "Type",		      
+ 
+		"Supplier": "Supplier",		      
+ 
+		"Date": "Date",		      
+ 
+		"Amount": "Amount",		      
+ 
+		"Add": "Add",		      
+ 
+		"Remove": "Remove",		      
+ 
+		"Usage": "Usage",		      
+ 
+		"Enumeration": "Enumeration",		      
+ 
+		"Enumeration filter": "Enumeration filter",		      
+ 
+		"Enumerations": "Enumerations",		      
+ 
+		"Filter": "Filter",		      
+ 
+		"Invalid Id": "Invalid Id",		      
+ 
+		"Human Resource": "Human Resource",		      
+ 
+		"Production": "Production",		      
+ 
+		"Appointment": "Appointment",		      
+ 
+		"Person filter": "Person filter",		      
+ 
+		"Persons": "Persons",		      
+ 
+		"Portable": "Portable",		      
+ 
+		"ResourceType": "Resource Type",		      
+ 
+		"Resource types": "Resource Types",		      
+ 
+		"Tarification filter": "Tarification filter",		      
+ 
+		"Task": "Task",		      
+ 
+		"Task filter": "Task filter",		      
+ 
+		"Select resources type": "Select resources type",		      
+ 
+		"Goods and Services filter": "Goods and Services filter",		      
+ 
+		"Select task": "Select task",		      
+ 
+		"Param": "Param",		      
+ 
+		"Security": "Security",		      
+ 
+		"Configuration": "Configuration",		      
+ 
+		"Finance": "Finance",		      
+ 
+		"More": "More",		      
+ 
+		"Resource": "Resource",		      
+ 
+		"Maintenance": "Maintenance",		      
+ 
+		"Billing": "Billing",		      
+ 
+		"Sharings": "Partages",		      
+ 
+		"Sharing filter": "Filtre partage",		      
+ 
+		"Technician": "Technician",		      
+ 
+		"Maintenance filter": "Maintenance filter",		      
+ 
+		"Maintenances": "Maintenances",		      
+ 
+		"Resource filter": "Resource filter",		      
+ 
+		"Technician filter": "Technician filter",		      
+ 
+		"User description": "User description",		      
+ 
+		"Technician Owned": "Technician Owned",		      
+ 
+		"Base amount item": "Base amount item",		      
+ 
+		"Discount item": "Discount item",		      
+ 
+		"Net amount item": "Net amount item",		      
+ 
+		"Count item(s)": "Count item(s)",		      
+ 
+		"Tax 1": "Tax 1",		      
+ 
+		"Tax 2": "Tax 2",		      
+ 
+		"Price": "Price",		      
+ 
+		"Customer": "Customer",		      
+ 
+		"Billing filter": "Billing filter",		      
+ 
+		"Billings": "Billings",		      
+ 
+		"Invalid feature": "Invalid feature",		      
+ 
+		"Mode": "Mode",		      
+ 
+		"TellerOperation": "Teller operation",		      
+ 
+		"Teller operations": "Teller operations",		      
+ 
+		"Teller operation filter": "Teller operation filter",		      
+ 
+		"Operation date": "Operation date",		      
+ 
+		"Amount used": "Amount used",		      
+ 
+		"Cancellation date": "Cancellation date",		      
+ 
+		"Payment mode": "Payment mode",		      
+ 
+		"Cash": "Cash",		      
+ 
+		"Check": "Check",		      
+ 
+		"Cart": "Cart",		      
+ 
+		"Mobile": "Mobile",		      
+ 
+		"Transfert": "Transfert",		      
+ 
+		"Other": "Other",		      
+ 
+		"Teller operation is not updatable": "Teller operation is not updatable",		      
+ 
+		"Purpose": "Purpose",		      
+ 
+		"TellerDayClosing": "Teller day closing",		      
+ 
+		"Cancelled amount": "Cancelled amount",		      
+ 
+		"Count net": "Count net",		      
+ 
+		"Count cancelled": "Count cancelled",		      
+ 
+		"Count total": "Count total",		      
+ 
+		"Phone number": "Phone number",		      
+ 
+		"Active ?": "Active ?",		      
+ 
+		"Role filter": "Role filter",		      
+ 
+		"User filter": "User filter",		      
+ 
+		"Entity": "Entity",		      
+ 
+		"Entity filter": "Entity filter",		      
+ 
+		"Entities": "Entities",		      
+ 
+		"Features": "Features",		      
+ 
+		"Feature filter": "Feature filter",		      
+ 
+		"Print ?": "Print ?",		      
+ 
+		"Attach ?": "Attach ?",		      
+ 
+		"Rel. view?": "Rel. view ?",		      
+ 
+		"Retreive ?": "Retreive ?",		      
+ 
+		"Task per technician per month": "Task per technician per month",		      
+ 
+		"Task per technician per day": "Task per technician per day",		      
+ 
+		"Turnover per technician customer": "Turnover per technician customer",		      
+ 
+		"Turnover per goods": "Turnover per goods",		      
+ 
+		"Adult service ?": "Adult service ?",		      
+ 
+		"Company Setup": "Company Setup",		      
+ 
+		"Sharing and Motivation": "Sharing and Motivation",		      
+ 
+		"Resource Type": "Resource Type",		      
+ 
+		"Resource type filter": "Resource type filter",		      
+ 
+		"Invalid amount": "Invalid amount",		      
+ 
+		"There is no service in this billing": "There is no service in this billing",		      
+ 
+		"There is some services without person designated": "There is some service without person designated",		      
+ 
+		"There is some tasks without technician designated": "There is some tasks without technician designated",		      
+ 
+		"Customer of technician": "Customer of technician",		      
+ 
+		"Reference is not specicied": "Reference is not specicied",		      
+ 
+		"Home": "Home",		      
+ 
+		"Services": "Services",		      
+ 
+		"Line": "Line",		      
+ 
+		"Customer is not specified": "Customer is not specified",		      
+ 
+		"Cash amount": "Cash amount",		      
+ 
+		"Check amount": "Check amount",		      
+ 
+		"Mobile amount": "Mobile amount",		      
+ 
+		"Cart amount": "Cart amount",		      
+ 
+		"Transfert amount": "Transfert amount",		      
+ 
+		"Other amount": "Other amount",		      
+ 
+		"Total amount": "Total amount",		      
+ 
+		"Person name is not specified": "Person name is not specified",		      
+ 
+		"Invalid person full name": "Invalid person full name",		      
+ 
+		"You have to select business appication before fetch business data": "You have to select business appication before fetch business data",		      
+ 
+		"Ref. N°": "Ref. N°",		      
+ 
+		"Identification": "Identification",		      
+ 
+		"Insured": "Insured",		      
+ 
+		"Effect": "Effect",		      
+ 
+		"Expiration": "Expiration",		      
+ 
+		"Request data": "Request data",		      
+ 
+		"Purpose is not specified": "Purpose is not specified",		      
+ 
+		"Request type - Business app.": "Request type - Business app.",		      
+ 
+		"Core business filter": "Core business filter",		      
+ 
+		"Effective": "Effective",		      
+ 
+		"Is request sended ?": "Is request sended ?",		      
+ 
+		"Is request send ok ?": "Is request sended succed ?",		      
+ 
+		"Is response checked ?": "Is response checked ?",		      
+ 
+		"Is response checked Ok?": "Is response checked Ok?",		      
+ 
+		"Is response arrived ?": "Is response arrived ?",		      
+ 
+		"Items list": "Items list",		      
+ 
+		"Extension": "Extension",		      
+ 
+		"Dbms": "Dbms",		      
+ 
+		"Name or description is not specified": "Name or description is not specified",		      
+ 
+		"Check response after request ?": "Check response after request ?",		      
+ 
+		"Has request data response document ?": "Has request data response document ?",		      
+ 
+		"Has request data item response document ?": "Has request data item response document ?",		      
+ 
+		"Has response check url ?": "Has response check url ?",		      
+ 
+		"Has response check folder ?": "Has response check folder ?",		      
+ 
+		"Move file after treatment ?": "Move file after treatment ?",		      
+ 
+		"Item extension": "Item extension",		      
+ 
+		"Extension type": "Extension type",		      
+ 
+		"Business applications": "Business applications",		      
+ 
+		"Business application": "Business application",		      
+ 
+		"Business App": "Business App",		      
+ 
+		"Query: Master": "Query: Master",		      
+ 
+		"Query: Item": "Query: Item",		      
+ 
+		"Response folder": "Response folder",		      
+ 
+		"Archive folder": "Archive folder",		      
+ 
+		"Request url": "Request url",		      
+ 
+		"Response check url": "Response check url",		      
+ 
+		"Request types": "Request types",		      
+ 
+		"Business app.": "Business app.",		      
+ 
+		"Request type": "Request type",		      
+ 
+		"Distr. Chanel": "Distr. Chanel",		      
+ 
+		"Request": "Request",		      
+ 
+		"Text": "Text",		      
+ 
+		"Length": "Length",		      
+ 
+		"Data type": "Data type",		      
+ 
+		"Interger number": "Interger number",		      
+ 
+		"Decimal number": "Decimal number",		      
+ 
+		"Float number": "Float number",		      
+ 
+		"Boolean": "Boolean",		      
+ 
+		"Time": "Time",		      
+ 
+		"Reference is not specified": "Reference is not specified",		      
+ 
+		"Is abstract ?": "Is abstract ?",		      
+ 
+		"Has def. constr. ?": "Has def. constr. ?",		      
+ 
+		"# constructor": "# constructor",		      
+ 
+		"# method": "# method",		      
+ 
+		"External library": "External library",		      
+ 
+		"Click to toad file": "Click to toad file",		      
+ 
+		"Classes": "Classes",		      
+ 
+		"Change password": "Change password",		      
+ 
+		"User name": "User name",		      
+ 
+		"Contract N°": "Contract N°",		      
+ 
+		"Effective date": "Effective date",		      
+ 
+		"Expiration date": "Expiration date",		      
+ 
+		"Direct con. ?": "Direct con. ?",		      
+ 
+		"Connection string": "Connection string",		      
+ 
+		"This action is only taken on valid entity": "This action is only taken on valid entity",		      
+ 
+		"User password": "User password",		      
+ 
+		"User reference": "User reference",		      
+ 
+		"User name/description is not specified": "User name/description is not specified",		      
+ 
+		"Applications": "Applications",		      
+ 
+		"Business application filter": "Business application filter",		      
+ 
+		"Retrieve ?": "Retrieve ?",		      
+ 
+		"The minimum length for filter business entity is 5 !!!": "The minimum length for filter business entity is 5 !!!",		      
+ 
+		"Save": "Save",		      
+ 
+		"Action": "Action",		      
+ 
+		"Privacy policy": "Privacy policy",		      
+ 
+		"Terms of use": "Terms of use",		      
+ 
+		"Support and Resources": "Support and Resources",		      
+ 
+		"Setting": "Setting",		      
+ 
+		"Return item reference api url": "Return item reference api url",		      
+ 
+		"Is item reference return ?": "Is item reference return ?",		      
+ 
+		"My requests of the month": "My requests of the month",		      
+ 
+		"My certificates of the month": "My certificates of the month",		      
+ 
+		"The time remaining for auto logout is": "The time remaining for auto logout is",		      
+ 
+		"second(s)": "second(s)",		      
+ 
+		"Password is not specified": "Password is not specified",		      
+ 
+		"Api authentication ?": "Api authentication ?",		      
+ 
+		"Api login": "Api login",		      
+ 
+		"Api password": "Api password",		      
+ 
+		"Authentication url": "Authentication url",		      
+ 
+		"Response in directory ?": "Response in directory ?",		      
+ 
+		"Ftp server": "Ftp server",		      
+ 
+		"Response in ftp server ?": "Response in ftp server ?",		      
+ 
+		"Port": "Port",		      
+ 
+		"Ftp protocol": "Ftp protocol",		      
+ 
+		"Ftp folder": "Ftp folder",		      
+ 
+		"Protocol": "Protocol",		      
+ 
+		"Class": "Class",		      
+ 
+		"Queries": "Queries",		      
+ 
+		"Query": "Query",		      
+ 
+		"Request item status update url": "Request item status update url",		      
+ 
+		"Default value": "Default value",		      
+ 
+		"Codifications": "Codifications",		      
+ 
+		"Query: Intermediary": "Query: Intermediary",		      
+ 
+		"Query: User": "Query: User",		      
+ 
+		"Codification mapping": "Codification mapping",		      
+ 
+		"Origin code": "Origin code",		      
+ 
+		"Mapping code": "Mapping code",		      
+ 
+		"Local server url": "Local server url",		      
+ 
+		"Operation done !!!": "Operation done !!!",		      
+ 
+		"Intermediary code": "Intermediary code",		      
+ 
+		"Applicant code": "Applicant code",		      
+ 
+		"Access code": "Code acces",		      
+ 
+		"Query: Office": "Query: Office",		      
+ 
+		"Use codification mapping ?": "Use codification mapping ?",		      
+ 
+		"Point of sale": "Point of sale",		      
+ 
+		"Office": "Office",		      
+ 
+		"Request date": "Request date",		      
+ 
+		"# Request(s)": "# Request(s)",		      
+ 
+		"Request send status": "Request send status",		      
+ 
+		"Response date": "Response date",		      
+ 
+		"Response check status": "Response check status",		      
+ 
+		"# Response(s)": "# Response(s)",		      
+ 
+		"You are going to be auto logout": "You are going to be auto logout",		      
+ 
+		"There is a request for this business data in the sytem !!!": "There is a request for this business data in the sytem !!!",		      
+ 
+		"Codification": "Codification",		      
+ 
+		"Parent codification": "Parent codification",		      
+ 
+		"Type name": "Type name",		      
+ 
+		"Type description": "Type description",		      
+ 
+		"Item": "Item",		      
+ 
+		"Template report": "Template report",		      
+ 
+		"Api file": "Api file",		      
+ 
+		"Report": "Report",		      
+ 
+		"Document language": "Document language",		      
+ 
+		"English": "English",		      
+ 
+		"French": "French",		      
+ 
+		"Alias": "Alias",		      
+ 
+		"Email object": "Email object",		      
+ 
+		"Message type": "Message type",		      
+ 
+		"Sms": "Sms",		      
+ 
+		"WhatsApp": "WhatsApp",		      
+ 
+		"Facebook": "Facebook",		      
+ 
+		"Message": "Message",		      
+ 
+		"Document": "Document",		      
+ 
+		"Layout": "Layout",		      
+ 
+		"Word": "Word",		      
+ 
+		"Excel": "Excel",		      
+ 
+		"Format": "Format",		      
+ 
+		"Entity is not specified": "Entity is not specified",		      
+ 
+		"Data format is not specified": "Data format is not specified",		      
+ 
+		"Expression evaluation error": "Expression evaluation error",		      
+ 
+		"Selected format and return type of expression are incompatible": "Selected format and return type of expression are incompatible",		      
+ 
+		"Integer": "Integer",		      
+ 
+		"Decimal": "Decimal",		      
+ 
+		"Float": "Float",		      
+ 
+		"SmsApi": "SMS Api",		      
+ 
+		"Job schedule": "Job schedule",		      
+ 
+		"Start date": "Start date",		      
+ 
+		"Schedules": "Schedules",		      
+ 
+		"Query filter": "Query filter",		      
+ 
+		"System function": "System function",		      
+ 
+		"Dur. unit": "Dur. unit",		      
+ 
+		"Retention": "Retention",		      
+ 
+		"Report filter": "Report filter",		      
+ 
+		"Default": "Default",		      
+ 
+		"Transmission mode": "Transmission mode",		      
+ 
+		"Recipient": "Recipient",		      
+ 
+		"Entity is not defined": "Entity is not defined",		      
+ 
+		"Feature": "Feature",		      
+ 
+		"Day": "Day",		      
+ 
+		"Month": "Month",		      
+ 
+		"Unic": "Unic",		      
+ 
+		"Recurrent": "Recurrent",		      
+ 
+		"Schedule": "Schedule",		      
+ 
+		"Url message (send)": "Url message (send)",		      
+ 
+		"Url balance (check)": "Url balance (check)",		      
+ 
+		"Expression message OK": "Expression message OK",		      
+ 
+		"Balance count expression": "Balance count expression",		      
+ 
+		"Query parameters": "Query parameters",		      
+ 
+		"Value": "Value",		      
+ 
+		"Recipient name": "Recipient name",		      
+ 
+		"Message name": "Message name",		      
+ 
+		"Prefix number": "Prefix number",		      
+ 
+		"Number lentgh": "Number lentgh",		      
+ 
+		"Operators": "Operators",		      
+ 
+		"Initial": "Initial",		      
+ 
+		"Priority": "Priority",		      
+ 
+		"The result of expression must be string": "The result of expression must be string",		      
+ 
+		"The result of expression must be boolean": "The result of expression must be boolean",		      
+ 
+		"The result of expression must be numeric": "The result of expression must be numeric",		      
+ 
+		"Monday": "Monday",		      
+ 
+		"Tuesday": "Tuesday",		      
+ 
+		"Wednesday": "Wednesday",		      
+ 
+		"Thursday": "Thursday",		      
+ 
+		"Friday": "Friday",		      
+ 
+		"Saturday": "Saturday",		      
+ 
+		"Sunday": "Sunday",		      
+ 
+		"January": "January",		      
+ 
+		"Febuary": "Febuary",		      
+ 
+		"March": "March",		      
+ 
+		"April": "April",		      
+ 
+		"May": "May",		      
+ 
+		"June": "June",		      
+ 
+		"July": "July",		      
+ 
+		"August": "August",		      
+ 
+		"September": "September",		      
+ 
+		"October": "October",		      
+ 
+		"November": "November",		      
+ 
+		"December": "December",		      
+ 
+		"Has end time ?": "Has end time ?",		      
+ 
+		"Order": "Order",		      
+ 
+		"First": "First",		      
+ 
+		"Second": "Second",		      
+ 
+		"Third": "Third",		      
+ 
+		"Fourth": "Fourth",		      
+ 
+		"Last": "Last",		      
+ 
+		"Day of week": "Day of week",		      
+ 
+		"Expression": "Expression",		      
+ 
+		"The business application query for filter is not defined": "The business application query for filter is not defined",		      
+ 
+		"The result of expression must be": "The result of expression must be",		      
+ 
+		"MessageBody": "Message body",		      
+ 
+		"Image": "Image",		      
+ 
+		"Identity token": "Identity token",		      
+ 
+		"Instance Id": "Instance Id",		      
+ 
+		"Token": "Token",		      
+ 
+		"Visible / Hide": "Visible / Hide",		      
+ 
+		"Contracts": "Contracts",		      
+ 
+		"Webhook URL": "Webhook URL",		      
+ 
+		"WhatsApp N°": "WhatsApp N°",		      
+ 
+		"External ?": "External ?",		      
+ 
+		"The url is invalid, you have to add ?xxxx at the of url": "The url is invalid, you have to add ?xxxx at the of url",		      
+ 
+		"Invalid entity": "Invalid entity",		      
+ 
+		"You are not allowed to save this entity": "You are not allowed to save this entity",		      
+ 
+		"You are not allowed to create this entity": "You are not allowed to create this entity",		      
+ 
+		"but, you can modify it.": "but, you can modify it.",		      
+ 
+		"You are not allowed to modify this entity": "You are not allowed to modify this entity",		      
+ 
+		"but, you can create it.": "but, you can create it.",		      
+ 
+		"Dashboard": "Dashboard",		      
+ 
+		"All parameters should have name and type": "All parameters should have name and type",		      
+ 
+		"Table filter": "Table filter",		      
+ 
+		"Column of table (alias)": "Column of table (alias)",		      
+ 
+		"Output value": "Output value",		      
+ 
+		"Base": "Base",		      
+ 
+		"Aggregation": "Aggregation",		      
+ 
+		"Sum": "Sum",		      
+ 
+		"Min": "Min",		      
+ 
+		"Max": "Max",		      
+ 
+		"Avg": "Avg",		      
+ 
+		"Count": "Count",		      
+ 
+		"Add Output value": "Add Output value",		      
+ 
+		"Data preparation method": "Data preparation method",		      
+ 
+		"Period": "Period",		      
+ 
+		"Period ?": "Period ?",		      
+ 
+		"Password complexity?": "Password complexity?",		      
+ 
+		"Password duration": "Password duration",		      
+ 
+		"Duration in days": "Duration in days",		      
+ 
+		"Password rotation": "Password rotation",		      
+ 
+		"Number of differents": "Number of differents",		      
+ 
+		"Max failed count": "Max failed count",		      
+ 
+		"Number of failures": "Number of failures",		      
+ 
+		"Access lockout duration": "Access lockout duration",		      
+ 
+		"Duration in minutes": "Duration in minutes",		      
+ 
+		"Application theme": "Application theme",		      
+ 
+		"Background": "Background",		      
+ 
+		"Primary": "Primary",		      
+ 
+		"Secondary": "Secondary",		      
+ 
+		"Grid header": "Grid header",		      
+ 
+		"Grid alt": "Grid alt",		      
+ 
+		"Grid active row": "Grid active row",		      
+ 
+		"Grid selected rows": "Grid selected rows",		      
+ 
+		"Menu button": "Menu button",		      
+ 
+		"Menu icon": "Menu icon",		      
+ 
+		"Dark": "Dark",		      
+ 
+		"Light": "Light",		      
+ 
+		"Success": "Success",		      
+ 
+		"Info": "Info",		      
+ 
+		"Danger": "Danger",		      
+ 
+		"Warning": "Warning",		      
+ 
+		"Muted": "Muted",		      
+ 
+		"Border": "Border",		      
+ 
+		"Inverse": "Inverse",		      
+ 
+		"Shaft": "Shaft",		      
+ 
+		"Generic theme": "Generic theme",		      
+ 
+		"Blue": "Blue",		      
+ 
+		"Green": "Green",		      
+ 
+		"Yellow": "Yellow",		      
+ 
+		"Red": "Red",		      
+ 
+		"Pink": "Pink",		      
+ 
+		"Apply": "Apply",		      
+ 
+		"Application Setup": "Application Setup",		      
+ 
+		"Search": "Search",		      
+ 
+		"Page size": "Page size",		      
+ 
+		"Previous": "Previous",		      
+ 
+		"Next": "Next",		      
+ 
+		"Application Query": "Application Query",		      
+ 
+		"Confirm this action": "Confirm this action",		      
+ 
+		"Your password is going to expire in few days, you have to change it.": "Your password is going to expire in few days, you have to change it.",		      
+ 
+		"You must change your password because the complexity is not respeted": "You must change your password because the complexity is not respeted",		      
+ 
+		"Properties": "Properties",		      
+ 
+		"Default expression": "Default expression",		      
+ 
+		"Direct ?": "Direct ?",		      
+ 
+		"File name": "File name",		      
+ 
+		"Short message": "Short message",		      
+ 
+		"Report tables": "Report tables",		      
+ 
+		"Table details": "Table details",		      
+ 
+		"Property": "Property",		      
+ 
+		"SQL Query parameters": "SQL Query parameters",		      
+ 
+		"Property filter": "Property filter",		      
+ 
+		"Group": "Group",		      
+ 
+		"Add step": "Add step",		      
+ 
+		"Test": "Test",		      
+ 
+		"Run all step item by item ?": "Run all step item by item ?",		      
+ 
+		"The report selected is not compatible with the entity of this schedule": "The report selected is not compatible with the entity of this schedule",		      
+ 
+		"End date": "End date",		      
+ 
+		"Identity": "Identity",		      
+ 
+		"Extract and export data": "Extract and export data",		      
+ 
+		"Password never expired?": "Password never expired?",		      
+ 
+		"Should reset password?": "Should reset password?",		      
+ 
+		"Groups": "Groups",		      
+ 
+		"Group filter": "Group filter",		      
+ 
+		"Request type access": "Request type access",		      
+ 
+		"Not define": "Not define",		      
+ 
+		"Bank transfert": "Bank transfert",		      
+ 
+		"Salary": "Salary",		      
+ 
+		"First name": "First name",		      
+ 
+		"Last name": "Last name",		      
+ 
+		"Birth date": "Birth date",		      
+ 
+		"Delivrance place": "Delivrance place",		      
+ 
+		"Number": "Number",		      
+ 
+		"Nationality": "Nationality",		      
+ 
+		"Address": "Address",		      
+ 
+		"Town": "Town",		      
+ 
+		"Country": "Country",		      
+ 
+		"Contacts": "Contacts",		      
+ 
+		"of father": "of father",		      
+ 
+		"of mother": "of mother",		      
+ 
+		"of tutor": "of tutor",		      
+ 
+		"_Father": "Father",		      
+ 
+		"_Mother": "Mother",		      
+ 
+		"_Tutor": "Tutor",		      
+ 
+		"Birth place": "Birth place",		      
+ 
+		"You have to check if person exists before save, verify it in this list of": "You have to check if person exists before save, verify it in this list of",		      
+ 
+		"_person": "person",		      
+ 
+		"The employee who manage this customer is already defined": "The employee who manage this customer is already defined",		      
+ 
+		"There is no employee who manage this customer": "There is no employee who manage this customer",		      
+ 
+		"Invalid employee": "Invalid employee",		      
+ 
+		"Date type": "Date type",		      
+ 
+		"Creation date": "Creation date",		      
+ 
+		"Gender": "Gender",		      
+ 
+		"Identification type": "Identification type",		      
+ 
+		"Employee": "Employee",		      
+ 
+		"Person type": "Person type",		      
+ 
+		"Physical": "Physical",		      
+ 
+		"Moral": "Moral",		      
+ 
+		"Part. sign": "Part. sign",		      
+ 
+		"Create ?": "Create ?",		      
+ 
+		"Visualize ?": "Visualize ?",		      
+ 
+		"Update ?": "Update ?",		      
+ 
+		"Collaboration": "Collaboration",		      
+ 
+		"Chat": "Chat",		      
+ 
+		"Chat room": "Chat room",		      
+ 
+		"Initialize": "Initialize",		      
+ 
+		"Qr": "Qr",		      
+ 
+		"Retrying": "Retrying",		      
+ 
+		"Loading": "Loading",		      
+ 
+		"Authenticated": "Authenticated",		      
+ 
+		"Disconnected": "Disconnected",		      
+ 
+		"Standby": "Standby",		      
+ 
+		"Click to connect your WhatsApp account": "Click to connect your WhatsApp account",		      
+ 
+		"Connect your WhatsApp account": "Connect your WhatsApp account",		      
+ 
+		"Is Sended ?": "Is Sended ?",		      
+ 
+		"Sending date": "Sending date",		      
+ 
+		"Video": "Video",		      
+ 
+		"Audio": "Audio",		      
+ 
+		"Delivered": "Delivered",		      
+ 
+		"Read": "Read",		      
+ 
+		"Sended": "Sended",		      
+ 
+		"There is no recipient": "There is no recipient",		      
+ 
+		"Message body is not specified": "Message body is not specified",		      
+ 
+		"File caption is not specified": "File caption is not specified",		      
+ 
+		"File name is not specified": "File name is not specified",		      
+ 
+		"Last error message": "Last error message",		      
+ 
+		"File caption": "File caption",		      
+ 
+		"Add number by pressing ENTER": "Add number by pressing ENTER",		      
+ 
+		"Contact filter": "Contact filter",		      
+ 
+		"Exchanges with": "Exchanges with",		      
+ 
+		"on": "on",		      
+ 
+		"Contact": "Contact",		      
+ 
+		"Title": "Title",		      
+ 
+		"Ticket": "Ticket",		      
+ 
+		"Assigned to": "Assigned to",		      
+ 
+		"Resolution step": "Resolution step",		      
+ 
+		"Severity": "Severity",		      
+ 
+		"Problem": "Problem",		      
+ 
+		"Comments": "Comments",		      
+ 
+		"Resolution history": "Resolution history",		      
+ 
+		"Root cause": "Root cause",		      
+ 
+		"Contact is not specified": "Contact is not specified",		      
+ 
+		"Codification Ex.": "Codification Ex.",		      
+ 
+		"Parent item": "Parent item",		      
+ 
+		"Associated to problem": "Associated to problem",		      
+ 
+		"Allowed ?": "Allowed ?",		      
+ 
+		"Authorizations": "Authorizations",		      
+ 
+		"Authorization filter": "Authorization filter",		      
+ 
+		"Deny ?": "Deny ?",		      
+ 
+		"Select report to export": "Select report to export",		      
+ 
+		"Export": "Export",		      
+ 
+		"Parameter": "Parameter",		      
+ 
+		"Extraction": "Extraction",		      
+ 
+		"Queries: Extraction": "Queries: Extraction",		      
+ 
+		"Click to prepare data for extraction": "Click to prepare data for extraction",		      
+ 
+		"Preparation": "Preparation",		      
+ 
+		"Desktop publishing": "Desktop publishing",		      
+ 
+		"Error while preparing data": "Error while preparing data",		      
+ 
+		"Report is processing": "Report is processing",		      
+ 
+		"Authorization": "Authorization",		      
+ 
+		"Invalid report": "Invalid report",		      
+ 
+		"Contract filter": "Contract filter",		      
+ 
+		"Read messages ?": "Read messages ?",		      
+ 
+		"Send messages ?": "Send messages ?",		      
+ 
+		"Associate messages to ticket ?": "Associate messages to ticket ?",		      
+ 
+		"Read ?": "Read ?",		      
+ 
+		"Send ?": "Send ?",		      
+ 
+		"Associate ticket ?": "Associate ticket ?",		      
+ 
+		"Create new ticket": "Create new ticket",		      
+ 
+		"Validate": "Validate",		      
+ 
+		"Operation": "Operation",		      
+ 
+		"Messages": "Messages",		      
+ 
+		"Double click to select attach message to a ticket": "Double click to select attach message to a ticket",		      
+ 
+		"Last active tickets for the contact": "Last active tickets for the contact",		      
+ 
+		"The day of": "The day of",		      
+ 
+		"Total": "Total",		      
+ 
+		"Tickets distribution": "Tickets distribution",		      
+ 
+		"non-ticketable messages": "non-ticketable messages",		      
+ 
+		"Validated tickets": "Validated tickets",		      
+ 
+		"Tickets": "Tickets",		      
+ 
+		"You have to check if product exists before save, verify it in this list of": "You have to check if product exists before save, verify it in this list of",		      
+ 
+		"_product": "product",		      
+ 
+		"Visual identification of message": "Visual identification of message",		      
+ 
+		"Non ticketable": "Non ticketable",		      
+ 
+		"Ticketable": "Ticketable",		      
+ 
+		"Joined to ticket": "Joined to ticket",		      
+ 
+		"New message": "New message",		      
+ 
+		"Message automation": "Message automation",		      
+ 
+		"Matching expression": "Matching expression",		      
+ 
+		"New ticket": "New ticket",		      
+ 
+		"All account": "All account",		      
+ 
+		"No filter": "No filter",		      
+ 
+		"All contacts": "All contacts",		      
+ 
+		"Ticketable message": "Ticketable message",		      
+ 
+		"Non ticketable message": "Non ticketable message",		      
+ 
+		"Message assigned to tiket": "Message assigned to tiket",		      
+ 
+		"All messages": "All messages",		      
+ 
+		"The day from": "The day from",		      
+ 
+		"to": "to",		      
+ 
+		"Reply": "Reply",		      
+ 
+		"Replied messages": "Replied messages",		      
+ 
+		"List of messages": "List of messages",		      
+ 
+		"Avg response time": "Avg response time",		      
+ 
+		"Phone call": "Phone call",		      
+ 
+		"Mail": "Mail",		      
+ 
+		"Twitter": "Twitter",		      
+ 
+		"Activated ?": "Activated ?",		      
+ 
+		"This name is provide by Nyxis during activation": "This name is provide by Nyxis during activation",		      
+ 
+		"Instagram": "Instagram",		      
+ 
+		"Call": "Call",		      
+ 
+		"LinkedIn": "LinkedIn",		      
+ 
+		"Identity of the contact": "Identity of the contact",		      
+ 
+		"Account": "Account",		      
+ 
+		"Mail transmission mode": "Mail transmission mode",		      
+ 
+		"Template message": "Template message",		      
+ 
+		"Scheduling": "Scheduling",		      
+ 
+		"Message refill": "Message refill",		      
+ 
+		"Credit transfert": "Credit transfert",		      
+ 
+		"Service activation": "Service activation",		      
+ 
+		"Reports use for export data": "Reports use for export data",		      
+ 
+		"Entities for mapping parameters": "Entities for mapping parameters",		      
+ 
+		"Updatable ?": "Updatable ?",		      
+ 
+		"File size should be less than 200 KB": "File size should be less than 200 KB",		      
+ 
+		"Line of business is not specified": "Line of business is not specified",		      
+ 
+		"Line of business": "Line of business",		      
+ 
+		"Option": "Option",		      
+ 
+		"Wrapping": "Wrapping",		      
+ 
+		"Max. loaded": "Max. loaded",		      
+ 
+		"Appointment visualisation color": "Appointment visualisation color",		      
+ 
+		"Duration in day before renewal": "Duration in day before renewal",		      
+ 
+		"Cumulative duration rate": "Cumulative duration rate",		      
+ 
+		"Max. discount": "Max. discount",		      
+ 
+		"Tasks of service": "Tasks of service",		      
+ 
+		"Product filter": "Product filter",		      
+ 
+		"Tasks are not well defined": "Tasks are not well defined",		      
+ 
+		"Current credits": "Current credits",		      
+ 
+		"Purchased credits": "Purchased credits",		      
+ 
+		"Credits used": "Credits used",		      
+ 
+		"Authorized debit": "Authorized debit",		      
+ 
+		"Default header": "Default header",		      
+ 
+		"Name view by recipient": "Name view by recipient",		      
+ 
+		"Is dynamic ?": "Is dynamic ?",		      
+ 
+		"Default country": "Default country",		      
+ 
+		"Send out of country ?": "Send out of country ?",		      
+ 
+		"Phone number length": "Phone number length",		      
+ 
+		"Contract Id": "Contract Id",		      
+ 
+		"Message header": "Message header",		      
+ 
+		"Delivery status": "Delivery status",		      
+ 
+		"Count failures": "Count failures",		      
+ 
+		"Count sms": "Count sms",		      
+ 
+		"Campaign": "Campaign",		      
+ 
+		"Appointment date": "Appointment date",		      
+ 
+		"Category is required": "Category is required",		      
+ 
+		"Regis. Number": "Regis. Number",		      
+ 
+		"Hiring date": "Hiring date",		      
+ 
+		"Last diploma": "Last diploma",		      
+ 
+		"Diploma date": "Diploma date",		      
+ 
+		"Manager": "Manager",		      
+ 
+		"Person Id": "Person Id",		      
+ 
+		"Active commissions": "Active commissions",		      
+ 
+		"Active payments": "Active payments",		      
+ 
+		"Active deductions": "Active deductions",		      
+ 
+		"Technician ?": "Technician ?",		      
+ 
+		"Specialization": "Specialization",		      
+ 
+		"Function": "Function",		      
+ 
+		"Bonus on task ?": "Bonus on task ?",		      
+ 
+		"Min. amount for bonus": "Min. amount for bonus",		      
+ 
+		"Bonus": "Bonus",		      
+ 
+		"Tasks of employee": "Tasks of employee",		      
+ 
+		"This service or package can not be assign to this employee": "This service or package can not be assign to this employee",		      
+ 
+		"Start": "Start",		      
+ 
+		"End": "End",		      
+ 
+		"Phone number is not specified": "Phone number is not specified",		      
+ 
+		"Notification mode is not specified": "Notification mode is not specified",		      
+ 
+		"Notification": "Notification",		      
+ 
+		"Notification mode": "Notification mode",		      
+ 
+		"Add service(s) for this appointment": "Add service(s) for this appointment",		      
+ 
+		"Empl. type": "Empl. type",		      
+ 
+		"Customer billing": "Customer billing",		      
+ 
+		"Not validated cancelled": "Not validated cancelled",		      
+ 
+		"Discount": "Discount",		      
+ 
+		"Loaded": "Loaded",		      
+ 
+		"Done ?": "Done ?",		      
+ 
+		"Execution date": "Execution date",		      
+ 
+		"The customer is not specified": "The customer is not specified",		      
+ 
+		"Net": "Net",		      
+ 
+		"Paid": "Paid",		      
+ 
+		"Unpaid": "Unpaid",		      
+ 
+		"Add product(s)": "Add product(s)",		      
+ 
+		"Execution date ?": "Execution date ?",		      
+ 
+		"Purchase of services": "Purchase of services",		      
+ 
+		"SMS credit": "SMS credit",		      
+ 
+		"Appointment management": "Appointment management",		      
+ 
+		"Customer service management": "Customer service management",		      
+ 
+		"Months": "Months",		      
+ 
+		"Unity price": "Unity price",		      
+ 
+		"Quantity": "Quantity",		      
+ 
+		"Subscription duration": "Subscription duration",		      
+ 
+		"Application API": "Application API",		      
+ 
+		"Integration": "Integration",		      
+ 
+		"Failled": "Failled",		      
+ 
+		"Pending": "Pending",		      
+ 
+		"Messages sended by day": "Messages sended by day",		      
+ 
+		"Messages by operator": "Messages by operator",		      
+ 
+		"ContentType": "Content type",		      
+ 
+		"Content type": "Content type",		      
+ 
+		"Web site": "Web site",		      
+ 
+		"Media": "Media",		      
+ 
+		"Content": "Content",		      
+ 
+		"API alias": "API alias",		      
+ 
+		"Cardinality": "Cardinality",		      
+ 
+		"Add property": "Add property",		      
+ 
+		"Url": "Url",		      
+ 
+		"FileName": "File name",		      
+ 
+		"File": "File",		      
+ 
+		"Click to change": "Click to change",		      
+ 
+		"Definition of content": "Definition of content",		      
+ 
+		"List of items": "List of items",		      
+ 
+		"Formatted ?": "Formatted ?",		      
+ 
+		"Is required ?": "Is required ?",		      
+ 
+		"Is unique ?": "Is unique ?",		      
+ 
+		"Is private ?": "Is private ?",		      
+ 
+		"Main info ?": "Main info ?",		      
+ 
+		"Visual identification of content": "Visual identification of content",		      
+ 
+		"Active content": "Active content",		      
+ 
+		"Inactive content": "Inactive content",		      
+ 
+		"Welcome to": "Welcome to",		      
+ 
+		"About us": "About us",		      
+ 
+		"Shop": "Shop",		      
+
+		"univ": "univ"
+	}
+}
+	
+	
