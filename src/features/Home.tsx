@@ -17,6 +17,7 @@ import SpecialOffers from './setup/SpecialOffers';
 import OurServices from './setup/OurServices';
 import Reservation from './setup/Reservation';
 import { useTranslation } from 'react-i18next';
+import Astuces from './setup/Astuces';
 
 function Home() {
 
@@ -43,6 +44,7 @@ function Home() {
                     <OurValues />
                     <SpecialOffers />
                     <OurServices />
+                    <Astuces/>
                     <Reservation />
                 </Stack>
             </Grid>

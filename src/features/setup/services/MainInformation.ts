@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa  } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa  } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -134,6 +134,16 @@ const _ = () => {
       return await data;
     }
 
+    const getAstuces = async (pagination?: IPagination) : Promise<IAstuce[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/astuce/get-contents`));
+      return await data;
+    }
+
     const getGaleryPhotos = async (pagination?: IPagination) : Promise<IGaleryPhoto[]> => {
       const pageSize = pagination?.pageSize ?? 50;
       const pageNumber = pagination?.pageNumber ?? 1;
@@ -220,6 +230,8 @@ const _ = () => {
 
       getSpecialityDefinitions,
       getSpecialities,
+
+      getAstuces,
 
       getReservations,
 

@@ -106,6 +106,14 @@ export interface IGaleryPhoto {
     image_Url: string 
 }
 
+export interface IAstuce{
+    id:number,
+    titreAstuce: string,
+    titreSecondaire : string,
+    lienVideo1 : string,
+    lienVideo2 : string
+}
+
 export interface IArrierePlan {
     id: number,
     titrePrincipal : string,
@@ -231,6 +239,14 @@ export const defaultReservation : IReservation = {
 
     image: '',
     image_Url: ''  
+}
+
+export const defaultAstuce : IAstuce = {
+    id: 0,
+    titreAstuce: "",
+    titreSecondaire: "",
+    lienVideo1: "",
+    lienVideo2: ""
 }
 
 export const defaultArrierePlan : IArrierePlan = {
