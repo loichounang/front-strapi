@@ -50,6 +50,8 @@ import { useQuery } from 'react-query';
 import { isFalsy } from 'utility-types';
 
 
+
+
 export const Footer = () => {
 
   const { getMainInformations, getGaleryPhotos } = useMainInformation();
@@ -90,21 +92,47 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
                 <img src={`${globalConfig.get().apiUrl}/download/${mainInformation.logo1_Url}`} alt="Logo" style={{ width: 120, borderRadius: '5%' }} />
               </Link>                                                       
             </Box>
-            <Box sx={{ mt: 0.25, width: '100%', display: 'flex', justifyContent: 'center' }} > 
-              <Typography >
-                  <Link href={mainInformation.lienFacebook} target="_blank" sx={{fontFamily:'Poppins', textDecoration:'none', color:'#fff', marginRight:'15px'}}>
-                      <FacebookIcon  sx={{fontSize:'40px'}}/>
-                  </Link>  
-                  <Link href={mainInformation.lienInstagram} target="_blank" sx={{fontFamily:'Poppins', textDecoration:'none', color:'#fff', fontSize:'30px', marginRight:'15px'}}>
-                      <InstagramIcon sx={{fontSize:'40px'}}/>
-                  </Link>  
-                  <Link href={mainInformation.lienTwitter} target="_blank" sx={{fontFamily:'Poppins', textDecoration:'none', color:'#fff', marginRight:'15px'}}>
-                    <TwitterIcon sx={{fontSize:'40px', color:'#AE'}}/>
-                  </Link>
-                  <Link href={mainInformation.lienLinkedin} target="_blank" sx={{fontFamily:'Poppins', textDecoration:'none', color:'#fff'}}>
-                    <LinkedInIcon sx={{fontSize:'40px', color:'#AE'}}/>
-                  </Link>
-                </Typography>
+           
+          </Stack>
+        </Grid>
+        
+       
+        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
+          <Stack flexDirection='column'  >
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }} id="tableTitle" color="white" noWrap >
+                {`${t(('NAVIGATION'))} `}
+              </Typography>                                                       
+            </Box>
+
+            <Typography sx={{marginTop:'6px'}}></Typography>
+
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
+              {`${t(('Accueil'))} `}
+              </Typography>   
+            </Box>
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
+              {`${t(('Betuole SPA'))} `}
+              </Typography>   
+            </Box>
+          
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" >
+              {`${t(('Résultats de nos soins'))} `}
+              </Typography>   
+            </Box>
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3" sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" >
+              {`${t(('SPA en image'))} `}
+              </Typography>   
+            </Box>
+
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
+              {`${t(('Contact'))} `}
+              </Typography>   
             </Box>
           </Stack>
         </Grid>
@@ -112,91 +140,72 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
         <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
           <Stack flexDirection='column'  >
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  component="h2"  {...typographyBigGroupBoxStyling} id="tableTitle" color="white" noWrap >
+              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }}id="tableTitle" color="white" noWrap >
+                {`${t(('NOS PRESTATIONS'))} `}
+              </Typography>                                                       
+            </Box>
+
+            <Typography sx={{marginTop:'6px'}}></Typography>
+
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+              {`${t(('Bien être'))} `}
+              </Typography>   
+            </Box>
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+              {`${t(('Mains et pieds'))} `}
+              </Typography>   
+            </Box>
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+              {`${t(('Soins de corps'))} `}
+              </Typography>   
+            </Box>
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
+              {`${t(('Soins de visage'))} `}
+              </Typography>   
+            </Box>
+          </Stack>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
+          <Stack flexDirection='column'  >
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }} id="tableTitle" color="white" noWrap >
                 {`${t(('CONTACT'))} `}
               </Typography>                                                       
             </Box>
+
+            <Typography sx={{marginTop:'6px'}}></Typography>
+
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  {...typographyGroupBoxStyling} id="tableTitle" color="white" noWrap >
-                {mainInformation.horaire1}
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+               Horaire : {mainInformation.horaire1}
               </Typography>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  {...typographyGroupBoxStyling} id="tableTitle" color="white" noWrap >
-                {mainInformation.portable1}
+              <Typography component="h3" sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
+                Téléphone :{mainInformation.portable1}
               </Typography>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  {...typographyGroupBoxStyling} id="tableTitle" color="white" noWrap >
-                {mainInformation.email1}
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+                Email : {mainInformation.email1}
               </Typography>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  {...typographyGroupBoxStyling} id="tableTitle" color="white" >
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
                 {mainInformation.localisation}
               </Typography>   
             </Box>
-          </Stack>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={3}  sx={{ borderRadius: 2, ml: 0, }} >
-          <Stack flexDirection='column'  >
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  component="h2"  {...typographyBigGroupBoxStyling} id="tableTitle" color="white" noWrap >
-                {`${t(('NOTRE NEWSLETTER'))} `}
-              </Typography>                                                       
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  {...typographyGroupBoxStyling} id="tableTitle" color="white" >
-                {`${t(('Abonnez-vous à notre newsletter et recevez toute notre actualité'))} `}
-              </Typography>                                                       
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <TextField sx={{width:'calc(100% - 8px)' , border: "#E4B33F", background: 'white'}}  id="email" label=''
-                placeholder='Votre adresse e-mail' variant="outlined" 
-                inputProps={ { autoComplete: 'new-password', style: {textTransform: 'none'} } } autoFocus 
-                
-              />                                                       
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%', display: 'flex', justifyContent: 'center' }} > 
-              <Button variant="contained" sx={{background:'linear-gradient(to right, #371F07, #DBA82F)', color:'#fff',
-                marginTop:'15px',fontFamily: 'Poppins !important', width:'80%', height:'55px', borderRadius:'30px'}} >
-                INSCRIVEZ VOUS
-              </Button>                                                       
-            </Box>
-          </Stack>
-        </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
-          <Stack flexDirection='column'  >
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  component="h2"  {...typographyBigGroupBoxStyling} id="tableTitle" color="white" noWrap >
-                {`${t(('Galerie'))} `}
-              </Typography>                                                       
-            </Box>
-            {  range(0, ( photos.length+2)/3).map( (ix) => {
-                                                    
-              return (
-                <Box sx={{ mt: 0.25, width: '100%' , display: 'flex',  flexDirection: 'row' }} key={` box-ii- ${ix}`}> 
-                  {range(0, Math.min(3, photos.length-3*ix) ).map( (iy) => { // Math.max(getValues().policyExtensions.length, 3*(ix+1))
-                    const index = 3*ix + iy;
-                    const galaryPhoyo = photos[index];
-                    
-                    return (
-                      <Box sx={{ m : 1, width: '30%' }} > 
-                        <img src={`${globalConfig.get().apiUrl}/download/${galaryPhoyo.image_Url}`} alt="..." key={` img ${galaryPhoyo.image_Url}`}
-                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '2%'  }}/>                                                    
-                      </Box> )
-                      } )
-                    }                                                    
-                </Box>)
-            }) }           
-            
           </Stack>
         </Grid>
         <Divider />
         <Grid item xs={12} sx={{ borderRadius: 2, ml: 0, }} >
           <Stack flexDirection='column'  textAlign="center">
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{fontFamily:'Poppins', fontWeight:'bold'}} id="tableTitle" color="white" noWrap >
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
                 {`${t(('Copyright © 2024 BetuoleSpa tous droits réservés'))} `}
               </Typography>                                                       
             </Box>

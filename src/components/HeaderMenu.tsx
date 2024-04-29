@@ -101,8 +101,8 @@ const handleSubMenuClose = () => {
               </Link>   
           </Grid>
           <Grid item xs={10} container justifyContent="space-around" sx={{ display: { xs: 'none', md: 'flex' } }}>
-      <Button color="inherit" component={Link} to="/" sx={{ color: '#DBA82F', fontWeight: 'bold', fontSize: '0.90rem', '&:hover': { color: '#DBA82F' }}}>{t('Home').toUpperCase()}</Button>
-      <Button color="inherit" component={Link} to="/aboutUs" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.90rem', '&:hover': { color: '#DBA82F' } }}>{t("L'Univers Betuole").toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/" sx={{ color: '#DBA82F', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Home').toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/aboutUs" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t(" Betuole Spa").toUpperCase()}</Button>
       <Button
   color="inherit"
   onMouseEnter={handleSubMenuOpen}
@@ -110,21 +110,22 @@ const handleSubMenuClose = () => {
   sx={{
     color: 'black',
     fontWeight: 'bold',
-    fontSize: '0.90rem',
+    fontSize: '0.75rem', 
+    fontFamily:'Poppins',
     '&:hover': { color: '#DBA82F' }
   }}
 >
-  {t('Services').toUpperCase()}
+  {t('Prestations').toUpperCase()}
   {subMenuOpen && (
     <Box sx={{ position: 'absolute', top: '100%', left: 0 }}>
       <SousMenus onClose={handleSubMenuClose} open={true} />
     </Box>
   )}
 </Button>
-
-      <Button color="inherit" component={Link} to="/reservation" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.90rem', '&:hover': { color: '#DBA82F' }}}>{t('Reservation').toUpperCase()}</Button>
-      <Button color="inherit" component={Link} to="/shop" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.90rem', '&:hover': { color: '#DBA82F' } }}>{t('Shop').toUpperCase()}</Button>
-      <Button color="inherit" component={Link} to="/contact" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.90rem', '&:hover': { color: '#DBA82F' } }}>{t('Contact').toUpperCase()}</Button>
+<Button color="inherit" component={Link} to="/boutique" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Résultats de nos soins').toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/boutique" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Spa en image').toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/contact" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Contact').toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/reservation" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Reservation').toUpperCase()}</Button>
     </Grid>   
 
           <Grid item xs={10} container justifyContent="flex-end" sx={ {display: { xs: 'flex', md: 'none' }} }>

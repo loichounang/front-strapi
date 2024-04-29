@@ -53,12 +53,12 @@ const [reservation, setReservation] = useState<IReservation>(defaultReservation)
           <Grid item xs={12} md={6}>            
             <Stack flexDirection='column' textAlign="center"  alignItems="flex-start">
               <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h3" {...typographySmallHandWriting}>
+                <Typography variant="h1" sx={{fontSize: '45px', fontWeight:'bold'}} {...typographySmallHandWriting}>
                   {reservation.titreGlobal} 
                 </Typography>                
               </Box>
               <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center'}}>
-                <Typography variant='h5' sx={{fontFamily:'Poppins', fontWeight:'700'}}>
+                <Typography variant='h4' sx={{fontSize: '35px'}} {...typographySmallHandWriting}>
                   {reservation.titre}
                 </Typography>
               </Box>
@@ -68,20 +68,12 @@ const [reservation, setReservation] = useState<IReservation>(defaultReservation)
                   <Divider sx={{ borderColor: '#371F07', mx: 2, width: '20%', }} />
               </Box>     
               <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h6" sx={{fontFamily:'Poppins', fontWeight:'600'}}>
+                <Typography variant="h6" sx={{fontFamily:'Poppins'}}>
                   {reservation.messageAccueil} 
                 </Typography>                
               </Box>         
-              <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h6" sx={{fontFamily:'Poppins'}}>
-                  {reservation.messageReservation} 
-                </Typography>                
-              </Box>
-              <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center'}}>
-                <Typography variant="h6" sx={{fontFamily:'Poppins'}}>
-                  {reservation.messageReservationOnline} 
-                </Typography>                
-              </Box>
+              
+              
               <Box sx={{ mt: 0.5, width: '100%', display: 'flex', justifyContent: 'center'}}>
                 <Button variant="contained" onClick={() => {setOpenAppointmentForm(true);}}
                     sx={{
@@ -99,7 +91,7 @@ const [reservation, setReservation] = useState<IReservation>(defaultReservation)
           <Grid item xs={12} md={6}>            
             <Stack flexDirection='column' textAlign="center" >
               <Box sx={{ mt: 1, p: 2, width: '100%', display: 'flex', justifyContent: 'center'}}> 
-                <img src={`${globalConfig.get().apiUrl}/download/${reservation.image_Url}`} alt="..." style={{ height: '350px', objectFit: 'cover', borderRadius: '2%' }}/>
+                <img src={`${globalConfig.get().apiUrl}/download/${reservation.image_Url}`} alt="..." style={{ height: '450px', objectFit: 'cover', borderRadius: '2%', width: '100%' }}/>
               </Box>              
             </Stack>
           </Grid>  

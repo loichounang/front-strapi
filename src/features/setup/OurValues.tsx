@@ -100,7 +100,7 @@ const [valueDefinition, setValueDefinition] = useState<IValueDefintion>(defaultV
             <Stack flexDirection='column' textAlign="center" >
               <Box sx={{ mt: 1, p: 2, width: '100%', display: 'flex', justifyContent: 'center'}}> 
                 <img src={`${globalConfig.get().apiUrl}/download/${valueDefinition.image_Url}`} 
-                    alt="..." style={{ height: '450px', objectFit: 'cover', borderRadius: '2%'}}/>
+                    alt="..." style={{ height: '400px', objectFit: 'cover', borderRadius: '2%', width: '100%'}}/>
               </Box>              
             </Stack>
           </Grid>  

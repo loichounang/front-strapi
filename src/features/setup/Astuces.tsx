@@ -7,6 +7,7 @@ import { useQuery } from 'react-query';
 import { IAstuce, defaultAstuce } from 'features/setup/models/MainInformation';
 import useMainInformation from 'features/setup/services/MainInformation';
 import { isFalsy } from 'utility-types';
+import { typographyBigGroupBoxStyling, typographySmallHandWriting } from 'themes/commonStyles';
 
 // Style personnalisé pour les titres
 const Title = styled(Typography)({
@@ -50,13 +51,21 @@ const Astuces = () => {
   };
 
   return (
-    <Container maxWidth='xl'>
-      <Title>{astuceInformation.titreAstuce}</Title>
-      <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'center' }}>
+    <Container maxWidth='xl' sx={{marginTop : '10px'}}>
+         <Grid container spacing={2}>
+          <Grid item xs={12} md={7}>
+        <Box  textAlign="justify">
+      <Title sx={{fontSize: '45px'}} {...typographySmallHandWriting}>{astuceInformation.titreAstuce}</Title>
+      <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'justify' }}>
         
           <Subtitle>{astuceInformation.titreSecondaire}</Subtitle>
         
       </Box>
+      </Box>
+          </Grid>
+          <Grid item xs={12} md={5}></Grid>
+        </Grid>
+      
       <Grid container spacing={2}>
         <Grid item md={6}>
           {/* Vidéo 1 */}

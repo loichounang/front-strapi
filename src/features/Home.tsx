@@ -18,6 +18,8 @@ import OurServices from './setup/OurServices';
 import Reservation from './setup/Reservation';
 import { useTranslation } from 'react-i18next';
 import Astuces from './setup/Astuces';
+import Testimonials from './setup/Testimonials';
+import SocialMedia from './setup/SocialMedia';
 
 function Home() {
 
@@ -46,6 +48,8 @@ function Home() {
                     <OurServices />
                     <Astuces/>
                     <Reservation />
+                    <Testimonials/>
+                    <SocialMedia/>
                 </Stack>
             </Grid>
         </Grid>  
