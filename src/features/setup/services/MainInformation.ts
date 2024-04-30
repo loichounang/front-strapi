@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa  } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce,  IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, ISpecialOffer, ISpecialOfferDefintion, ICategoryProduct , ISpecialityDefinition, IValueDefintion, IValueSpa, INews  } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -59,7 +59,7 @@ const _ = () => {
 
       //const {name, description, phoneNumber} = criteria;
       
-      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/slide/get-contents`));
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/newProduct/get-contents`));
       return await data;
     }
 
@@ -114,13 +114,23 @@ const _ = () => {
       return await data;
     }
 
-    const getSpecialities = async (pagination?: IPagination) : Promise<ISpeciality[]> => {
+    const getCategories = async (pagination?: IPagination) : Promise<ICategoryProduct []> => {
       const pageSize = pagination?.pageSize ?? 50;
       const pageNumber = pagination?.pageNumber ?? 1;
 
       //const {name, description, phoneNumber} = criteria;
       
-      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/speciality/get-contents`));
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/productCategory/get-contents`));
+      return await data;
+    }
+
+    const getNouveautes = async (pagination?: IPagination) : Promise<INews []> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/news/get-contents`));
       return await data;
     }
 
@@ -229,7 +239,9 @@ const _ = () => {
       getSpecialOffers,
 
       getSpecialityDefinitions,
-      getSpecialities,
+      getCategories,
+
+      getNouveautes,
 
       getAstuces,
 

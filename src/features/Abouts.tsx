@@ -1,4 +1,4 @@
-import OurValues from './setup/OurValues';
+import OurValues from './setup/News';
 import Reservation from './setup/Reservation';
 import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';

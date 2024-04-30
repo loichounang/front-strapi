@@ -24,7 +24,6 @@ import Grow from '@mui/material/Grow';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 
-import Popper from '@mui/material/Popper';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
@@ -81,137 +80,242 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
       sx={{
         ...fullWidthFlex,
         borderTop: '1px solid #ddd',
-        background: 'linear-gradient(to right, #371F07, #E4B33F)'
+        background: '#231F20'
       }}
     >
-      <Grid container rowSpacing={0.5} columnSpacing={0.1}>
-        <Grid item xs={12} sm={6} md={4} lg={3} sx={{ borderRadius: 2, ml: 0,  }} >
-          <Stack flexDirection='column' alignItems='center' >
-            <Box sx={{ mt: 0.25, width: '100%', display: 'flex', justifyContent: 'center' }} > 
+      <Container maxWidth='xl'>
+      <Grid container spacing={1}>
+  <Grid item xs={12} md={3} sx={{ borderRadius: 2, ml: 0 }}>
+    <Grid>
+      <Stack sx={{ flexDirection: 'column' }}>
+        <Box sx={{ mt: 0.25, width: '100%' }}>
+          <Typography variant='body1' sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} id="tableTitle" color="white" noWrap>
+            {`${t(('PRODUITS'))} `}
+          </Typography>
+        </Box>
+
+        <Typography sx={{ marginTop: '6px' }}></Typography>
+
+        <Box sx={{ mt: 0.25, width: '100%' }} >
+          <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+            {`${t(('IP'))} `}
+          </Typography>
+        </Box>
+        <Box sx={{ mt: 0.25, width: '100%' }} >
+          <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+            {`${t(('Intrusion'))} `}
+          </Typography>
+        </Box>
+
+        <Box sx={{ mt: 0.25, width: '100%' }} >
+          <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+            {`${t(('Networking'))} `}
+          </Typography>
+        </Box>
+        <Box sx={{ mt: 0.25, width: '100%' }} >
+          <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+            {`${t(("Contrôle d'accès"))} `}
+          </Typography>
+        </Box>
+
+        <Box sx={{ mt: 0.25, width: '100%' }} >
+          <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+            {`${t(('Analyse Vidéo'))} `}
+          </Typography>
+        </Box>
+        <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          {`${t(('Portiers Vidéos'))} `}
+        </Typography>
+      </Box>
+
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+          {`${t(('Accessoires'))} `}
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+          {`${t(('Contrôle de présence'))} `}
+        </Typography>
+      </Box>
+
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+          {`${t(('Incendie'))} `}
+        </Typography>
+      </Box>
+      </Stack>
+    </Grid>
+  </Grid>
+
+
+  <Grid item xs={12} md={2} sx={{ borderRadius: 2, ml: 0 }}>
+    <Stack sx={{ flexDirection: 'column' }}>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography variant='body1' sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} id="tableTitle" color="white" noWrap>
+          {`${t(('CATALOGUE'))} `}
+        </Typography>
+      </Box>
+
+      <Typography sx={{ marginTop: '6px' }}></Typography>
+
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          {`${t(('Liste des tarifs'))} `}
+        </Typography>
+      </Box>
+      
+    </Stack>
+  </Grid>
+
+
+  <Grid item xs={12} md={2} sx={{ borderRadius: 2, ml: 0 }}>
+    <Stack sx={{ flexDirection: 'column' }}>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography variant='body1' sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} id="tableTitle" color="white" noWrap>
+          {`${t(('SERVICE TECHNIQUE'))} `}
+        </Typography>
+      </Box>
+
+      <Typography sx={{ marginTop: '6px' }}></Typography>
+
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          {`${t(('Bien être'))} `}
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          {`${t(('Académie'))} `}
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          {`${t(('Démos'))} `}
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+          {`${t(('Agenda'))} `}
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+          {`${t(('CCTVDDNS'))} `}
+        </Typography>
+      </Box>
+    </Stack>
+  </Grid>
+
+
+  <Grid item xs={12} md={2} sx={{ borderRadius: 2, ml: 0 }}>
+    <Stack sx={{ flexDirection: 'column' }}>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography variant='body1' sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} id="tableTitle" color="white" noWrap>
+          {`${t(('ENTREPRISE'))} `}
+        </Typography>
+      </Box>
+
+      <Typography sx={{ marginTop: '6px' }}></Typography>
+
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          Qui sommes nous
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          Rejoignez notre équipe
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+          Prépation de projets
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+          Contact
+        </Typography>
+      </Box>
+    </Stack>
+  </Grid>
+  <Divider />
+
+  <Grid item xs={12} md={3} sx={{ borderRadius: 2, ml: 0 }}>
+    <Stack sx={{ flexDirection: 'column' }}>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography variant='body1' sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} id="tableTitle" color="white" noWrap>
+          {`${t(('NOUVELLES'))} `}
+        </Typography>
+      </Box>
+
+      <Typography sx={{ marginTop: '6px' }}></Typography>
+
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+        Nouveau système d’alarme hybride Ajax, <br/>la combinaison parfaite : filaire et sans fil
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+        Hikvision Motion Detection 2.0, l’Intelligence <br/>Artificielle dans la détection de mouvement
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" noWrap>
+        Les dernières mises à jour des <br/>applications iDMSS et gDMSS Plus
+        </Typography>
+      </Box>
+      <Box sx={{ mt: 0.25, width: '100%' }} >
+        <Typography component="h3" sx={{ fontFamily: 'Poppins', fontWeight: '500' }} id="tableTitle" color="white" >
+        Radioenlaces: Usos y Buenas Prácticas
+        </Typography>
+      </Box>
+    </Stack>
+  </Grid>
+
+
+        <Grid container rowSpacing={0.5} columnSpacing={0.1}>
+        <Grid item xs={12}  sx={{ borderRadius: 2, ml: 0,  }} >
+          <Stack flexDirection='column'  >
+            <Box sx={{ mt: 0.25, width: '100%', display: 'flex', justifyContent: 'justify' }} > 
               <Link sx={{fontFamily:'Poppins', textDecoration:'none',  marginRight:'25px'}}>
-                <img src={`${globalConfig.get().apiUrl}/download/${mainInformation.logo1_Url}`} alt="Logo" style={{ width: 120, borderRadius: '5%' }} />
-              </Link>                                                       
+                <img src={`${globalConfig.get().apiUrl}/download/${mainInformation.logo_Url}`} alt="Logo" style={{ width: 120, borderRadius: '5%' }} />
+
+              </Link>       
+                                                        
             </Box>
-           
+            <Typography>
+                <Link  target="_blank" style={{ textDecoration: 'none', color: '#3b5998', marginRight: '10px' }}>
+                    <FacebookIcon sx={{ fontSize: '30px' }} />
+                </Link>
+                <Link  target="_blank" style={{ textDecoration: 'none', color: '#e4405f', marginRight: '10px' }}>
+                    <InstagramIcon sx={{ fontSize: '30px' }} />
+                </Link>
+                <Link  target="_blank" style={{ textDecoration: 'none', color: '#1da1f2', marginRight: '10px' }}>
+                    <TwitterIcon sx={{ fontSize: '30px' }} />
+                </Link>
+                <Link  target="_blank" style={{ textDecoration: 'none', color: '#0077b5' }}>
+                    <LinkedInIcon sx={{ fontSize: '30px' }} />
+                </Link>
+            </Typography>  
           </Stack>
         </Grid>
+        </Grid>
+        </Grid>
+
+        <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'bold', color:'#fff',  textAlign:"center", alignItems:'center'}}  id="tableTitle" noWrap >
+                {`${t(('Copyright © 2024 ECDS Sarl tous droits réservés'))} `}
+              </Typography>                                                       
+            </Box>
+</Container>
         
-       
-        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
-          <Stack flexDirection='column'  >
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }} id="tableTitle" color="white" noWrap >
-                {`${t(('NAVIGATION'))} `}
-              </Typography>                                                       
-            </Box>
-
-            <Typography sx={{marginTop:'6px'}}></Typography>
-
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
-              {`${t(('Accueil'))} `}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
-              {`${t(('Betuole SPA'))} `}
-              </Typography>   
-            </Box>
-          
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" >
-              {`${t(('Résultats de nos soins'))} `}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3" sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" >
-              {`${t(('SPA en image'))} `}
-              </Typography>   
-            </Box>
-
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
-              {`${t(('Contact'))} `}
-              </Typography>   
-            </Box>
-          </Stack>
-        </Grid>
         
-        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
-          <Stack flexDirection='column'  >
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }}id="tableTitle" color="white" noWrap >
-                {`${t(('NOS PRESTATIONS'))} `}
-              </Typography>                                                       
-            </Box>
-
-            <Typography sx={{marginTop:'6px'}}></Typography>
-
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
-              {`${t(('Bien être'))} `}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
-              {`${t(('Mains et pieds'))} `}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
-              {`${t(('Soins de corps'))} `}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
-              {`${t(('Soins de visage'))} `}
-              </Typography>   
-            </Box>
-          </Stack>
-        </Grid>
-        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
-          <Stack flexDirection='column'  >
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }} id="tableTitle" color="white" noWrap >
-                {`${t(('CONTACT'))} `}
-              </Typography>                                                       
-            </Box>
-
-            <Typography sx={{marginTop:'6px'}}></Typography>
-
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
-               Horaire : {mainInformation.horaire1}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3" sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
-                Téléphone :{mainInformation.portable1}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
-                Email : {mainInformation.email1}
-              </Typography>   
-            </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
-                {mainInformation.localisation}
-              </Typography>   
-            </Box>
-          </Stack>
-        </Grid>
-        <Divider />
-        <Grid item xs={12} sx={{ borderRadius: 2, ml: 0, }} >
-          <Stack flexDirection='column'  textAlign="center">
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
-                {`${t(('Copyright © 2024 BetuoleSpa tous droits réservés'))} `}
-              </Typography>                                                       
-            </Box>
-          </Stack>
-        </Grid>
-      </Grid>
+     
+     
     </Box>
   )
 }

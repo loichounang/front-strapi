@@ -1,19 +1,9 @@
 
 export interface IMainInformation {
     id: number, 
-    portable1: string,
-    logo1: string,
-    logo1_Url: string,
-    email1: string,
-    horaire1: string,
-    titreCentre : string,
-    titreBienvenue: string,
-    descriptionBienvenue : string,
-    lienFacebook : string,
-    lienLinkedin : string,
-    lienTwitter : string,
-    lienInstagram : string,
-    localisation : string
+    logo: string,
+    logo_Url: string,
+ 
 }
 
 export interface IIMage4Carousel {
@@ -80,13 +70,23 @@ export interface ISpecialityDefinition {
     titre: string,   
 }
 
-export interface ISpeciality {
+export interface ICategoryProduct {
     id: number,
-    nom: string,
-    description: string,   
+    nom: string,  
     image: string,
     image_Url: string 
 }
+
+export interface INews {
+    id: number,
+    titrePrincipal: string,
+    titreSecondaire: string,   
+    image: string,
+    image_Url: string 
+}
+
+
+
 
 export interface IReservation {
     id: number,
@@ -179,19 +179,9 @@ export interface IPoseVernis{
 
 export const defaultMainInformation : IMainInformation = {
     id: 0,
-    portable1: '',
-    logo1: '',
-    logo1_Url: '',
-    email1: '',
-    horaire1: '',
-    titreCentre: '',
-    titreBienvenue: '',
-    descriptionBienvenue: '',
-    lienFacebook: "",
-    lienLinkedin: "",
-    lienTwitter: "",
-    lienInstagram: "",
-    localisation: ""
+    logo: '',
+    logo_Url: '',
+  
 }
 
 export const defaultIMage4Carousel : IIMage4Carousel = {

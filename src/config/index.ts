@@ -12,7 +12,7 @@ export interface DynamicConfig {
 export const defaultConfig : DynamicConfig = {
     //apiUrl: 'http://localhost/Welios',
     apiUrl: 'http://skrapi.univ-soft.com/',
-    applicationApiToken: '4fbsar144jfko8vfjx005ipaed',
+    applicationApiToken: 'uivso3e8mh70hadagairiyamswx',
 
     shineApiUrl: 'https://api.univ-shine.com/shine_server',
     shineToken: '00-11-22',

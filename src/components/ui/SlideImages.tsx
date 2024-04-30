@@ -1,26 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Box, Typography, Button, Paper, Grid, styled } from '@mui/material';
-
+import React from 'react';
+import { Box, Typography, Card } from '@mui/material';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-
 export interface SlideImagesProps {
-  images: {src: string, description: string}[]
+  images: { src: string; description: string }[];
 }
 
-
-
-const SlideImages = (props : SlideImagesProps) => {
-
-  const {images} = props;
+const SlideImages = (props: SlideImagesProps) => {
+  const { images } = props;
 
   const sliderSettings = {
     dots: true,
     infinite: true,
     speed: 1500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -41,31 +36,22 @@ const SlideImages = (props : SlideImagesProps) => {
     ],
   };
 
-  
-
   return (
     <Slider {...sliderSettings}>
-      {images.map( (image, idx) => 
-        (<div key={`car ${idx} ${image.description}`}>
-          <div style={{
-            outline: 'none',
-            border: 'none',
-            width: '180px',
-            height: '180px',
-            borderRadius: '50%',
-            overflow: 'hidden',
-            margin: '0 auto'
-          } }>
-            <img src={image.src} alt="..." style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%'  }}/>
-          </div>
-          <Box sx={{ textAlign: 'center', padding: '20px', borderRadius: '5px' }}>            
-            <Typography variant="body1" sx={{fontFamily:'Poppins', fontWeight:'bold'}} align="center">{image.description}</Typography>
+      {images.map((image, idx) => (
+        <div key={`card-${idx}`}>
+          <Card style={{ width: '200px', height: '200px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <img src={image.src} alt={image.description} style={{ width: '75%', height: 'auto', objectFit: 'cover', marginTop:'20px' }} />
+          </Card>
+          <Box sx={{ textAlign: 'center', padding: '20px', borderRadius: '5px' }}>
+            <Typography variant="body1" sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} align="center">
+              {image.description}
+            </Typography>
           </Box>
-        </div>) 
-      )}      
+        </div>
+      ))}
     </Slider>
   );
 };
-
 
 export default SlideImages;

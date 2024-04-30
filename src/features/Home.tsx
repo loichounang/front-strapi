@@ -12,14 +12,11 @@ import Welcome from './setup/Welcome';
 import CarouselImages from 'components/ui/CarousselImages';
 import CarouselRotateImages from 'components/ui/CarousselRotateImages';
 import SlideImages from 'components/ui/SlideImages';
-import OurValues from './setup/OurValues';
-import SpecialOffers from './setup/SpecialOffers';
+import News from './setup/News';
+
 import OurServices from './setup/OurServices';
 import Reservation from './setup/Reservation';
 import { useTranslation } from 'react-i18next';
-import Astuces from './setup/Astuces';
-import Testimonials from './setup/Testimonials';
-import SocialMedia from './setup/SocialMedia';
 
 function Home() {
 
@@ -42,14 +39,10 @@ function Home() {
                     <CarouselImages  images={ (images || []).map(x => ({
                         src: `${globalConfig.get().apiUrl}/download/${x.image_Url}`, 
                         mainTitle: x.titrePrincipal, secondaryTitle: x.titreSecondaire}) ) }  />
-                    <Welcome  />                    
-                    <OurValues />
-                    <SpecialOffers />
+                    <Welcome  />  
+                    <News />                  
                     <OurServices />
-                    <Astuces/>
-                    <Reservation />
-                    <Testimonials/>
-                    <SocialMedia/>
+                   
                 </Stack>
             </Grid>
         </Grid>  
