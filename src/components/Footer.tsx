@@ -38,7 +38,7 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 import { flexBetweenCenter, fullWidthFlex, justifyCenter, typographyBigGroupBoxStyling, typographyGroupBoxStyling } from 'themes/commonStyles';
 
 import { isExportBoxShowAtom, isDesktopPublishingBoxShowAtom ,currentUserSessionAtom } from 'library/store';
-import { Divider, Grid, Link, TextField, Typography } from '@mui/material';
+import { Divider, Grid, TextField, Typography } from '@mui/material';
 
 import { globalConfig } from 'config';
 
@@ -48,7 +48,7 @@ import { IGaleryPhoto, IMainInformation, defaultMainInformation } from 'features
 import useMainInformation from 'features/setup/services/MainInformation';
 import { useQuery } from 'react-query';
 import { isFalsy } from 'utility-types';
-
+import { Link } from 'react-router-dom';
 
 
 
@@ -88,7 +88,7 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
         <Grid item xs={12} sm={6} md={4} lg={3} sx={{ borderRadius: 2, ml: 0,  }} >
           <Stack flexDirection='column' alignItems='center' >
             <Box sx={{ mt: 0.25, width: '100%', display: 'flex', justifyContent: 'center' }} > 
-              <Link sx={{fontFamily:'Poppins', textDecoration:'none',  marginRight:'25px'}}>
+              <Link style={{ fontFamily: 'Poppins', textDecoration: 'none', marginRight: '25px' }} to='/'>
                 <img src={`${globalConfig.get().apiUrl}/download/${mainInformation.logo1_Url}`} alt="Logo" style={{ width: 120, borderRadius: '5%' }} />
               </Link>                                                       
             </Box>
@@ -97,7 +97,7 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
         </Grid>
         
        
-        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
+        <Grid item xs={6} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
           <Stack flexDirection='column'  >
             <Box sx={{ mt: 0.25, width: '100%' }} > 
               <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }} id="tableTitle" color="white" noWrap >
@@ -108,39 +108,39 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
             <Typography sx={{marginTop:'6px'}}></Typography>
 
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
-              {`${t(('Accueil'))} `}
-              </Typography>   
+            <Link to="/" style={{ fontFamily: 'Poppins', fontWeight: '500', color: 'white', textDecoration:'none' }}>
+                {`${t(('Accueil'))} `}
+              </Link> 
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" noWrap >
+              <Link to='/aboutUs'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}} >
               {`${t(('Betuole SPA'))} `}
-              </Typography>   
+              </Link>   
             </Box>
           
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" >
+            <Link to='/les-resultats-de-nos-soins'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
               {`${t(('Résultats de nos soins'))} `}
-              </Typography>   
+              </Link>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3" sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" >
+              <Link to='/le-spa-en-image'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
               {`${t(('SPA en image'))} `}
-              </Typography>   
+              </Link>   
             </Box>
 
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
+              <Link to='/contact'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
               {`${t(('Contact'))} `}
-              </Typography>   
+              </Link>   
             </Box>
           </Stack>
         </Grid>
         
-        <Grid item xs={12} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
+        <Grid item xs={6} sm={12} md={4} lg={3} sx={{ borderRadius: 2, ml: 0, }} >
           <Stack flexDirection='column'  >
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold' }}id="tableTitle" color="white" noWrap >
+              <Typography  variant='h5'  sx={{ fontFamily: 'Poppins', fontWeight:'bold',color: 'white' }} >
                 {`${t(('NOS PRESTATIONS'))} `}
               </Typography>                                                       
             </Box>
@@ -148,24 +148,24 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
             <Typography sx={{marginTop:'6px'}}></Typography>
 
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+              <Link to='/bien-être'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
               {`${t(('Bien être'))} `}
-              </Typography>   
+              </Link>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+              <Link to='/soins-de-visage' style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
               {`${t(('Mains et pieds'))} `}
-              </Typography>   
+              </Link>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}}  id="tableTitle" color="white" noWrap >
+            <Link to='/soins-de-corps'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
               {`${t(('Soins de corps'))} `}
-              </Typography>   
+              </Link>   
             </Box>
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Typography component="h3"  sx={{ fontFamily:'Poppins', fontWeight:'500'}} id="tableTitle" color="white" >
+            <Link to='/mains-et-pieds'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
               {`${t(('Soins de visage'))} `}
-              </Typography>   
+              </Link>   
             </Box>
           </Stack>
         </Grid>

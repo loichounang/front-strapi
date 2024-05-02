@@ -40,6 +40,13 @@ import Contact from 'features/Contact';
 import Abouts from 'features/Abouts';
 import PoseGel from './PoseGel';
 import Services from './Services';
+import SoinsDeVisage from 'features/SoinsDeVisage';
+import SoinsDeCorps from 'features/SoinsDeCorps';
+import MainEtPied from 'features/MainEtPied';
+import BienEtre from 'features/BienEtre';
+import GalerySpa from 'features/GalerySpa';
+import ResultatSoins from 'features/ResultatSoins';
+import Reservations from 'features/Reservations';
 
 
 
@@ -61,10 +68,22 @@ export const AppRoute = () => {
          <Route index element={<Home />} />
 
         <Route path="/" element={<Home />} />
-        {/* <Route path="/contact" element={<Contact />} />*/}
-       {/* <Route path="/aboutUs" element={<Abouts />} />*/}
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/le-spa-en-image" element={<GalerySpa/>} />
+       <Route path="/aboutUs" element={<Abouts />} />
        {/* <Route path="/service/poseGel" element={<PoseGel />} />*/}
        {/*<Route path="/service/:typeService" element={<Services/>} />*/}
+       
+        <Route path='/soins-de-visage' element={<SoinsDeVisage/>} />
+        <Route path='/soins-de-corps' element={<SoinsDeCorps/>} />
+        
+        <Route path='/mains-et-pieds' element={<MainEtPied/>} />
+        <Route path='/bien-être' element={<BienEtre/>} />
+        <Route path="/les-resultats-de-nos-soins" element={<ResultatSoins/>} />
+        <Route path="/reservation" element={<Reservations />} />
+
+        
+       
 
         <Route path="login" element={<Login />} />
         

@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa  } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisage, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire, IRelaxation, IOnglerie, IGaleryResultatSoins  } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -62,6 +62,165 @@ const _ = () => {
       const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/slide/get-contents`));
       return await data;
     }
+
+
+    const getDefSoinsVisage = async (pagination?: IPagination) : Promise<IDefSoinVisage[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defSoinVisage/get-contents`));
+      return await data;
+    }
+
+    const getDefSoinsCorps = async (pagination?: IPagination) : Promise<IDefSoinCorps[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defSoinCorps/get-contents`));
+      return await data;
+    }
+
+    const getDefMainPied = async (pagination?: IPagination) : Promise<IDefMainPied[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defMainPied/get-contents`));
+      return await data;
+    }
+
+    const getDefBienEtre = async (pagination?: IPagination) : Promise<IDefBienEtre[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/bienEtre/get-contents`));
+      return await data;
+    }
+
+    const getSoinsVisage = async (pagination?: IPagination) : Promise<ISoinVisage[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/soinVisage/get-contents`));
+      return await data;
+    }
+
+    const getGommageCorps = async (pagination?: IPagination) : Promise<IGommageCorps[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/soinGommageCorps/get-contents`));
+      return await data;
+    }
+
+
+    const getEpilationCorps = async (pagination?: IPagination) : Promise<IEpilation[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/epilation/get-contents`));
+      return await data;
+    }
+
+
+    const getSoinsMinceur = async (pagination?: IPagination) : Promise<ISoinMinceur[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/soinMinceur/get-contents`));
+      return await data;
+    }
+
+
+    
+    const getPackageSoinCorps = async (pagination?: IPagination) : Promise<IPackageSoinsCorps[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/package/get-contents`));
+      return await data;
+    }
+
+    const getMassage = async (pagination?: IPagination) : Promise<IMassage[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/massage/get-contents`));
+      return await data;
+    }
+
+
+    const getVajacial = async (pagination?: IPagination) : Promise<IVajacial[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/vajacial/get-contents`));
+      return await data;
+    }
+
+
+    const getSoinAmincissant = async (pagination?: IPagination) : Promise<ISoinAmincissant[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/soinAmincissant/get-contents`));
+      return await data;
+    }
+
+    const getEpilationCire = async (pagination?: IPagination) : Promise<IEpilationCire[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/epilationCire/get-contents`));
+      return await data;
+    }
+
+    const getRelaxation = async (pagination?: IPagination) : Promise<IRelaxation[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/relaxation/get-contents`));
+      return await data;
+    }
+
+    const getOnglerie = async (pagination?: IPagination) : Promise<IOnglerie[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/mainPied/get-contents`));
+      return await data;
+    }
+
+
 
 
     const getValueDefinitions = async (pagination?: IPagination) : Promise<IValueDefintion[]> => {
@@ -154,6 +313,17 @@ const _ = () => {
       return await data;
     }
 
+    const getGaleryResultatSoins = async (pagination?: IPagination) : Promise<IGaleryResultatSoins[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/resultatSoins/get-contents`));
+      return await data;
+    }
+
+
     const getServices = async (pagination?: IPagination) : Promise<IService[]> => {
       const pageSize = pagination?.pageSize ?? 50;
       const pageNumber = pagination?.pageNumber ?? 1;
@@ -189,7 +359,7 @@ const _ = () => {
 
       //const {name, description, phoneNumber} = criteria;
       
-      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/AboutsPage/get-contents`));
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/about/get-contents`));
       return await data;
     }
 
@@ -233,9 +403,29 @@ const _ = () => {
 
       getAstuces,
 
+      getDefSoinsVisage, 
+      getSoinsVisage,
+
+      getDefSoinsCorps,
+      getGommageCorps,
+      getEpilationCorps,
+      getSoinsMinceur,
+      getPackageSoinCorps,
+
+      getDefMainPied,
+      getOnglerie,
+
+      getDefBienEtre,
+      getMassage,
+      getVajacial,
+      getEpilationCire,
+      getSoinAmincissant,
+      getRelaxation,
+
       getReservations,
 
       getGaleryPhotos,
+      getGaleryResultatSoins, 
 
       getServices,
 

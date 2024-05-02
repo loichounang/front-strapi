@@ -76,7 +76,7 @@ export function FormDialog  (props : PropsWithChildren<FormDialogProps>)  {
           }
         }}
           maxWidth={maxWidth?maxWidth:sz} fullWidth={(fullWidth===undefined)?true:fullWidth}>
-        <DialogTitle sx={{backgroundImage: 'linear-gradient(to right, black, #EA489E)', color: 'white'}}
+        <DialogTitle sx={{backgroundImage: 'linear-gradient(to right, #371F07, #DBA82F)', color: 'white'}}
           >{title}
         </DialogTitle>
         <DialogContent>
@@ -94,9 +94,9 @@ export function FormDialog  (props : PropsWithChildren<FormDialogProps>)  {
             <CloseIcon />
           </IconButton>
         </DialogContent>
-        <DialogActions>
-          { cancelText!==''? <Button variant="outlined" onClick={onCancel} sx={{mb:2, ml: 1 }}>{cancelText}</Button>: null }
-          { okText !== ''? <Button variant="contained" onClick={onOk} sx={{mb:2, ml: 4 }}>{okText}</Button>: null}
+        <DialogActions >
+          { cancelText!==''? <Button variant="outlined"  onClick={onCancel} sx={{mb:2, ml: 1,fontFamily:'Poppins', backgroundColor: "#371F07", color:'white','&:hover': {bgcolor: '#DBA82F',color:'white' } }}>{cancelText}</Button>: null }
+          { okText !== ''? <Button variant="contained" onClick={onOk} sx={{mb:2, ml: 4,fontFamily:'Poppins', backgroundColor: "#371F07", color:'white' ,'&:hover': {bgcolor: '#DBA82F',color:'white' } }}>{okText}</Button>: null}
         </DialogActions>
       </Dialog>);    
 }

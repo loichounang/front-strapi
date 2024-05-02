@@ -106,6 +106,12 @@ export interface IGaleryPhoto {
     image_Url: string 
 }
 
+export interface IGaleryResultatSoins {
+    id: number,
+    image: string,
+    image_Url: string 
+}
+
 export interface IAstuce{
     id:number,
     titreAstuce: string,
@@ -131,13 +137,13 @@ export interface IAboutPage {
     id: number,
     titrePrincipal : string,
     titreSecondaire : string,
-    titreSecondaire1 : string,
-    imageLocaux: string,
-    imageLocaux_Url : string,
     titreGlobal : string,
-    titreGlobal1 : string,
-    titre : string,
-    titre1 : string,
+    profil1 : string,
+    profil1_Url: string,
+    profil2 : string,
+    profil2_Url: string,
+    description:string
+
 }
 
 export interface IPoseGel{
@@ -172,9 +178,117 @@ export interface IPoseVernis{
     typeVernis4 : string,
     typeVernis5 : string,
     typeVernis6 : string
-
 }
 
+export interface IDefSoinVisage{
+    id: number;
+    image : string;
+    image_Url : string;
+    titrePrincipal : string;
+    titreSecondaire : string;
+}
+
+export interface IDefSoinCorps{
+    id: number;
+    image : string;
+    image_Url : string;
+    titrePrincipal : string;
+    titreSecondaire : string;
+}
+
+export interface IDefMainPied{
+    id: number;
+    image : string;
+    image_Url : string;
+    titrePrincipal : string;
+    titreSecondaire : string;
+}
+
+
+export interface IDefBienEtre{
+    id: number;
+    image : string;
+    image_Url : string;
+    titrePrincipal : string;
+    titreSecondaire : string;
+}
+
+export interface IPackageSoinsCorps{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IGommageCorps{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IEpilation{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface ISoinMinceur{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface ISoinVisage{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IMassage{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IRelaxation{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IEpilationCire{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface ISoinAmincissant{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IVajacial{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
+export interface IOnglerie{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
 
 
 export const defaultMainInformation : IMainInformation = {
@@ -265,16 +379,14 @@ export const defaultArrierePlan : IArrierePlan = {
 
 export const defaultABoutPage : IAboutPage = {
     id: 0,
-    titreGlobal : '',
-    titreSecondaire : '',
-    titreSecondaire1 : '',
-    titreGlobal1 : '',
-    titre : '',
-    titre1 : '',
-    imageLocaux  : '',
-    imageLocaux_Url : '',
-    titrePrincipal : ''
-
+    titrePrincipal: "",
+    titreSecondaire: "",
+    titreGlobal: "",
+    profil1: "",
+    profil1_Url: "",
+    profil2: "",
+    profil2_Url: "",
+    description: ""
 }
 
 export const defaultPoseGelPage : IPoseGel = {
@@ -308,4 +420,40 @@ export const defaultPoseVernisPage : IPoseVernis = {
     typeVernis4: "",
     typeVernis5: "",
     typeVernis6: ""
+}
+
+export const defaultSoinsVisage : IDefSoinVisage = {
+    id: 0,
+    image: "",
+    image_Url: "",
+    titrePrincipal: "",
+    titreSecondaire: "",
+    
+}
+
+export const defaultSoinsCorps : IDefSoinCorps = {
+    id: 0,
+    image: "",
+    image_Url: "",
+    titrePrincipal: "",
+    titreSecondaire: "",
+    
+}
+
+export const defaultMainPied : IDefMainPied = {
+    id: 0,
+    image: "",
+    image_Url: "",
+    titrePrincipal: "",
+    titreSecondaire: "",
+    
+}
+
+export const defaultBienEtre : IDefBienEtre = {
+    id: 0,
+    image: "",
+    image_Url: "",
+    titrePrincipal: "",
+    titreSecondaire: "",
+    
 }

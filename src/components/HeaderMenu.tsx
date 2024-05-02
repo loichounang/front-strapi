@@ -122,8 +122,8 @@ const handleSubMenuClose = () => {
     </Box>
   )}
 </Button>
-<Button color="inherit" component={Link} to="/boutique" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Résultats de nos soins').toUpperCase()}</Button>
-      <Button color="inherit" component={Link} to="/boutique" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Spa en image').toUpperCase()}</Button>
+<Button color="inherit" component={Link} to="/les-resultats-de-nos-soins" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Résultats de nos soins').toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/le-spa-en-image" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Spa en image').toUpperCase()}</Button>
       <Button color="inherit" component={Link} to="/contact" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Contact').toUpperCase()}</Button>
       <Button color="inherit" component={Link} to="/reservation" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Reservation').toUpperCase()}</Button>
     </Grid>   

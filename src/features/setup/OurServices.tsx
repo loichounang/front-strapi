@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button, Stack, Divider, } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+import { Link } from 'react-router-dom';
 import { Grid, IconButton } from '@mui/material';
 
 
@@ -70,7 +70,9 @@ const SpecialityStack = (speciality: ISpeciality ) => {
           <Typography sx={{ background: 'rgba(0, 0, 0, 0.5)', color: 'white' }} {...typographyGroupBoxStyling} >
             {speciality.nom}
           </Typography>
+          
         </Box>
+       
       )}
     </Stack>
   );

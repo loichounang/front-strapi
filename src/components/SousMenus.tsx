@@ -19,129 +19,43 @@ const SousMenus: React.FC<ServicesSubMenuProps> = ({ open, onClose}) => {
         open={open}
         onClose={onClose}
         anchorReference="anchorPosition"
-        anchorPosition={{ top: 112, left: 200 }}
-        PaperProps={{ sx: { width: 1000, height: 300 } }} 
+        anchorPosition={{ top: 112, left: 450 }}
+        PaperProps={{ sx: { width: 300, height: 300 } }} 
         
       >
-        <List sx={{ display: 'flex', flexDirection: 'row' }}>
+        <List sx={{ display: 'flex', flexDirection: 'row', justifyContent:'center' }}>
           <ListItem sx={{ marginRight: '20px' }}>
-            <List>
+            <List > 
               <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="#" onClick={onClose}>
-                  {t('Onglerie')}
+                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/soins-de-visage" onClick={onClose}>
+                  {t('SOINS DE VISAGE')}
                 </Button>
               </ListItem>
               <ListItem>
               
-              <Button sx={{ fontFamily: 'Poppins', color: '#000', fontWeight: '400' }}  component={Link} to="/service/PoseGel" onClick={onClose}>
-                {t('Pose gel')}
+              <Button sx={{ fontFamily: 'Poppins', color: '#000', fontWeight: '400' }}  component={Link} to="/soins-de-corps" onClick={onClose}>
+                {t('SOINS DE CORPS')}
               </Button>
             </ListItem>
             <ListItem>
               
-              <Button sx={{ fontFamily: 'Poppins', color: '#000', fontWeight: '400' }}  component={Link} to="/service/PoseVernis" onClick={onClose}>
-                {t('Pose vernis')}
+              <Button sx={{ fontFamily: 'Poppins', color: '#000', fontWeight: '400' }}  component={Link} to="/mains-et-pieds" onClick={onClose}>
+                {t('MAINS ET PIEDS')}
               </Button>
             </ListItem>
               <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Manicure')}
+                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/bien-être" onClick={onClose}>
+                {t('BIEN-ETRE')}
                 </Button>
               </ListItem>
               <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Pedicure')}
+                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="#" onClick={onClose}>
+                {t('RELOOKING VISAGE ET MICRO PIGMENTATION')}
                 </Button>
               </ListItem>
             </List>
           </ListItem>
-          <ListItem sx={{ marginRight: '20px' }}>
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="/spa" onClick={onClose}>
-                  {t('Spa')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service2" onClick={onClose}>
-                  {t('Massage')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Soin de corps')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Soin de visagz')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Epilation')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
-          <ListItem sx={{ marginRight: '20px' }}>
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="/coiffure" onClick={onClose}>
-                  {t('Coiffure')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service1" onClick={onClose}>
-                  {t('Soin capillaire')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Tresses')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Coiffure femme')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins' , color:'#000', fontWeight:'400' }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Coiffure homme')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
-          <ListItem >
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="/soin-du-regard" onClick={onClose}>
-                  {t('Soin du regard')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service2" onClick={onClose}>
-                  {t('Make-up')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins' , color:'#000', fontWeight:'400' }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Regard')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins' , color:'#000', fontWeight:'400' }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Formation')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Pose gel')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
+          
         </List>
       </Popover>
     );
