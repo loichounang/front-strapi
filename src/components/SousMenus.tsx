@@ -1,151 +1,129 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Popover, List, ListItem, Button } from '@mui/material';
-import { useTranslation } from 'react-i18next'; // Importe useTranslation pour utiliser la traduction
-import {  Link } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 interface ServicesSubMenuProps {
   open: boolean;
   onClose: () => void;
-  
-  
 }
-const SousMenus: React.FC<ServicesSubMenuProps> = ({ open, onClose}) => {
-    const { t } = useTranslation();
-  
 
-    return (
-      <Popover
-        open={open}
-        onClose={onClose}
-        anchorReference="anchorPosition"
-        anchorPosition={{ top: 112, left: 200 }}
-        PaperProps={{ sx: { width: 1000, height: 300 } }} 
-        
-      >
-        <List sx={{ display: 'flex', flexDirection: 'row' }}>
-          <ListItem sx={{ marginRight: '20px' }}>
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="#" onClick={onClose}>
-                  {t('Onglerie')}
-                </Button>
-              </ListItem>
-              <ListItem>
-              
-              <Button sx={{ fontFamily: 'Poppins', color: '#000', fontWeight: '400' }}  component={Link} to="/service/PoseGel" onClick={onClose}>
-                {t('Pose gel')}
+const SousMenus: React.FC<ServicesSubMenuProps> = ({ open, onClose }) => {
+  const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState<string>(''); // État pour stocker la catégorie sélectionnée
+
+  // Fonction pour mettre à jour la catégorie sélectionnée
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+  };
+
+  return (
+    <Popover
+      open={open}
+      onClose={onClose}
+      anchorReference="anchorPosition"
+      anchorPosition={{ top: 180, left: 200 }}
+      PaperProps={{ sx: { width: 1000, height: 300 } }}
+    >
+      <List sx={{ display: 'flex', flexDirection: 'row' }}>
+        {/* Première colonne */}
+        <ListItem sx={{ marginRight: '20px' }}>
+          <List>
+            <ListItem>
+              <Button
+                sx={{ fontFamily: 'Poppins', color: selectedCategory === 'IP' ? '#ff0000' : '#000', fontWeight: '600' }}
+                component={Link}
+                to="#"
+                onClick={() => handleCategorySelect('IP')}
+              >
+                {t('IP')}
               </Button>
             </ListItem>
             <ListItem>
-              
-              <Button sx={{ fontFamily: 'Poppins', color: '#000', fontWeight: '400' }}  component={Link} to="/service/PoseVernis" onClick={onClose}>
-                {t('Pose vernis')}
+              <Button
+                sx={{ fontFamily: 'Poppins', color: selectedCategory === 'CCTV' ? '#ff0000' : '#000', fontWeight: '600' }}
+                component={Link}
+                to="#"
+                onClick={() => handleCategorySelect('CCTV')}
+              >
+                {t('CCTV')}
               </Button>
             </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Manicure')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Pedicure')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
-          <ListItem sx={{ marginRight: '20px' }}>
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="/spa" onClick={onClose}>
-                  {t('Spa')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service2" onClick={onClose}>
-                  {t('Massage')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Soin de corps')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Soin de visagz')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Epilation')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
-          <ListItem sx={{ marginRight: '20px' }}>
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="/coiffure" onClick={onClose}>
-                  {t('Coiffure')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service1" onClick={onClose}>
-                  {t('Soin capillaire')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Tresses')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Coiffure femme')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins' , color:'#000', fontWeight:'400' }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Coiffure homme')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
-          <ListItem >
-            <List>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'600'  }} component={Link} to="/soin-du-regard" onClick={onClose}>
-                  {t('Soin du regard')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service2" onClick={onClose}>
-                  {t('Make-up')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins' , color:'#000', fontWeight:'400' }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Regard')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins' , color:'#000', fontWeight:'400' }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Formation')}
-                </Button>
-              </ListItem>
-              <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/service/pogeGel" onClick={onClose}>
-                {t('Pose gel')}
-                </Button>
-              </ListItem>
-            </List>
-          </ListItem>
-        </List>
-      </Popover>
-    );
-  };
-  
-  export default SousMenus;
-  
+            <ListItem>
+              <Button
+                sx={{ fontFamily: 'Poppins', color: selectedCategory === 'Intrusion' ? '#ff0000' : '#000', fontWeight: '600' }}
+                component={Link}
+                to="#"
+                onClick={() => handleCategorySelect('Intrusion')}
+              >
+                {t('Intrusion')}
+              </Button>
+            </ListItem>
+            <ListItem>
+              <Button
+                sx={{ fontFamily: 'Poppins', color: selectedCategory === 'Accessoires' ? '#ff0000' : '#000', fontWeight: '600' }}
+                component={Link}
+                to="#"
+                onClick={() => handleCategorySelect('Accessoires')}
+              >
+                {t('Accessoires')}
+              </Button>
+            </ListItem>
+            <ListItem>
+              <Button
+                sx={{ fontFamily: 'Poppins', color: selectedCategory === 'Reseaux' ? '#ff0000' : '#000', fontWeight: '600' }}
+                component={Link}
+                to="#"
+                onClick={() => handleCategorySelect('Reseaux')}
+              >
+                {t('Reseaux')}
+              </Button>
+            </ListItem>
+          </List>
+        </ListItem>
+
+        {/* Deuxième colonne */}
+        <ListItem sx={{ marginRight: '20px' }}>
+          <List>
+            {/* Affiche le contenu en fonction de la catégorie sélectionnée */}
+            {selectedCategory === 'IP' && (
+              <>
+                <ListItem>Contenu pour la catégorie IP</ListItem>
+                <ListItem>Élément 1</ListItem>
+                <ListItem>Élément 2</ListItem>
+                <ListItem>Élément 3</ListItem>
+              </>
+            )}
+            {/* Répéter pour chaque catégorie */}
+          </List>
+        </ListItem>
+
+        {/* Troisième colonne */}
+        <ListItem sx={{ marginRight: '20px' }}>
+          <List>
+            {/* Affiche le contenu en fonction de la catégorie sélectionnée */}
+            {/* Répéter pour chaque catégorie */}
+          </List>
+        </ListItem>
+
+        {/* Quatrième colonne */}
+        <ListItem sx={{ marginRight: '20px' }}>
+          <List>
+            {/* Affiche le contenu en fonction de la catégorie sélectionnée */}
+            {/* Répéter pour chaque catégorie */}
+          </List>
+        </ListItem>
+
+        {/* Cinquième colonne */}
+        <ListItem>
+          <List>
+            {/* Affiche le contenu en fonction de la catégorie sélectionnée */}
+            {/* Répéter pour chaque catégorie */}
+          </List>
+        </ListItem>
+      </List>
+    </Popover>
+  );
+};
+
+export default SousMenus;

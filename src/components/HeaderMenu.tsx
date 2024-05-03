@@ -34,7 +34,7 @@ import EventSeatIcon from '@mui/icons-material/EventSeat';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
 import PersonIcon from '@mui/icons-material/Person';
 import { useTranslation } from 'react-i18next';
-
+import SousMenus from './SousMenus';
 
 
 export const HeaderMenu = () => {
@@ -52,7 +52,16 @@ export const HeaderMenu = () => {
   const handleClose = () => {
     setAnchorEl(null);
   }
+  const [subMenuOpen, setSubMenuOpen] = useState(false);
 
+  const handleSubMenuOpen = () => {
+    setSubMenuOpen(true);
+  };
+  
+  const handleSubMenuClose = () => {
+    setSubMenuOpen(false);
+  };
+  
 
  
     return (
@@ -60,7 +69,25 @@ export const HeaderMenu = () => {
       <Toolbar>
       <Grid container alignItems="center" justifyContent={"space-around"}>
   <Grid item xs={10} container justifyContent="space-around" sx={{ display: { xs: 'none', md: 'flex' } }}>
-    <Button color="inherit" component={Link} to="/" sx={{ color: '#922790', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#922790' }, margin: '0' }}>{t('Produits').toUpperCase()}</Button>
+  <Button
+  color="inherit"
+  onMouseEnter={handleSubMenuOpen}
+  onMouseLeave={handleSubMenuClose}
+  sx={{
+    color: 'black',
+    fontWeight: 'bold',
+    fontSize: '0.75rem', 
+    fontFamily:'Poppins',
+    '&:hover': { color: '#DBA82F' }
+  }}
+>
+  {t('Produits').toUpperCase()}
+  {subMenuOpen && (
+    <Box sx={{ position: 'absolute', top: '100%', left: 0 }}>
+      <SousMenus onClose={handleSubMenuClose} open={true} />
+    </Box>
+  )}
+</Button>
     <Button color="inherit" component={Link} to="/aboutUs" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#922790' }, margin: '0 ' }}>{t(" Catalogue").toUpperCase()}</Button>
     <Button color="inherit" component={Link} to="/aboutUs" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#922790' }, margin: '0 ' }}>{t(" Service technique").toUpperCase()}</Button>
     <Button
