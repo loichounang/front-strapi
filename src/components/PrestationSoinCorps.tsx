@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import {IReservation,defaultReservation, IGommageCorps,ISoinMinceur,IEpilation,IPackageSoinsCorps } from '../features/setup/models/MainInformation'; 
 import { Grid, Container, Typography,Stack,Box, Button } from '@mui/material';
@@ -28,7 +29,7 @@ const PrestationSoinCorps = () => {
 
   return (
     <Container maxWidth='xl'sx={{marginTop:'100px'}}>
-   <Container  maxWidth='xl' sx={{bgcolor:'#784828', color:'white'}}>
+   <Container  maxWidth='xl' sx={{bgcolor:'#DBA82F', color:'white'}}>
 
    <Grid container >
           <Grid item xs={12} md={8}>
@@ -124,7 +125,7 @@ const PrestationSoinCorps = () => {
   <Typography sx={{marginTop:'50px'}}></Typography>
   </Container>
 
-  <Container  maxWidth='xl' sx={{bgcolor:'#784828', color:'white'}}>
+  <Container  maxWidth='xl' sx={{bgcolor:'#DBA82F', color:'white'}}>
   <Grid container sx={{marginTop:'100px'}}>
        <Grid item xs={12} md={8}>
        <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
@@ -237,4 +238,3 @@ const PrestationSoinCorps = () => {
 };
 
 export default PrestationSoinCorps;
-

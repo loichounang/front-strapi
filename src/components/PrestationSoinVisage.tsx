@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ISoinVisage,IReservation,defaultReservation } from '../features/setup/models/MainInformation'; 
+import {IReservation,defaultReservation, ISoinVisages } from '../features/setup/models/MainInformation'; 
 import { Grid, Container, Typography,Stack,Box, Button } from '@mui/material';
 import useMainInformation from 'features/setup/services/MainInformation';
 import { useQuery } from 'react-query';
@@ -10,9 +10,9 @@ import { typographyBigGroupBoxStyling, typographyGroupBoxStyling, typographySmal
 import { useTranslation } from 'react-i18next';
 
 const PrestationSoinVisage = () => {
-  const { t, i18n } = useTranslation();
-    const { getSoinsVisage, getReservations } = useMainInformation();
-    const {data: soins} = useQuery<ISoinVisage[]>( ['SoinVisage'], () => getSoinsVisage());
+    const { t, i18n } = useTranslation();
+    const {  getReservations, getSoinsVisage } = useMainInformation();
+    const {data: soins} = useQuery<ISoinVisages[]>(['SoinVisages'], () => getSoinsVisage());
     const {data: reservations} = useQuery<IReservation[]>( ['Reservation'], () => getReservations());
     const [openAppointmentForm, setOpenAppointmentForm] = useState<boolean>(false);
 
@@ -24,25 +24,24 @@ const PrestationSoinVisage = () => {
   }, [reservations]);
 
   return (
-    <Container maxWidth='xl' sx={{marginTop:'100px'}}>
-      <Container  maxWidth='xl' sx={{bgcolor:'#784828', color:'white'}}>
+    <Container maxWidth='xl'sx={{marginTop:'100px'}}>
+      < Container  maxWidth='xl' sx={{bgcolor:'#DBA82F', color:'white'}}>
 
-<Grid container >
-       <Grid item xs={12} md={8}>
-       <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
-             <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-               {t('Soins de visage')}
-             </Typography>                
-           </Box>
-       </Grid>
-       <Typography sx={{marginTop:'150px'}}></Typography>
-       <Grid item xs={6} md={4}></Grid>
-     </Grid>
-   
+   <Grid container >
+          <Grid item xs={12} md={8}>
+          <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
+                <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
+                  {t('Soins de visage')}
+                </Typography>                
+              </Box>
+          </Grid>
+          <Typography sx={{marginTop:'150px'}}></Typography>
+          <Grid item xs={6} md={4}></Grid>
+        </Grid>
     <Grid container item>
       {( soins || []).map( (soin, idx) => (
         
-        <Grid xs={6} md={4} key={soin.id}>
+        <Grid xs={6}  md={3} key={soin.id}>
           <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{soin.titre}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{soin.duree}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{soin.prix}</Typography>
@@ -51,7 +50,7 @@ const PrestationSoinVisage = () => {
         
       ))}
     </Grid> 
-    
+      
        
   <Stack>
     <Grid container>
@@ -91,4 +90,3 @@ const PrestationSoinVisage = () => {
 };
 
 export default PrestationSoinVisage;
-

@@ -146,25 +146,34 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
             </Box>
 
             <Typography sx={{marginTop:'6px'}}></Typography>
-
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Link to='/bien-être'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
-              {`${t(('Bien être'))} `}
+            <Link to='/mains-et-pieds'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
+              {`${t(('Soins de visage'))} `}
               </Link>   
             </Box>
-            <Box sx={{ mt: 0.25, width: '100%' }} > 
-              <Link to='/soins-de-visage' style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
-              {`${t(('Mains et pieds'))} `}
-              </Link>   
-            </Box>
+            
+            
             <Box sx={{ mt: 0.25, width: '100%' }} > 
             <Link to='/soins-de-corps'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
               {`${t(('Soins de corps'))} `}
               </Link>   
             </Box>
+
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-            <Link to='/mains-et-pieds'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
-              {`${t(('Soins de visage'))} `}
+              <Link to='/soins-de-visage' style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
+              {`${t(('Mains et pieds'))} `}
+              </Link>   
+            </Box>
+           
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Link to='/bien-être'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}   >
+              {`${t(('Bien être et Spa'))} `}
+              </Link>   
+            </Box>
+
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+            <Link to='#'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
+              {`${t(('Relooking visage et micro pigmentation'))} `}
               </Link>   
             </Box>
           </Stack>

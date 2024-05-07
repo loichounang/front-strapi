@@ -45,7 +45,7 @@ const ResultatSoins = () => {
                                         <img
                                             src={`${globalConfig.get().apiUrl}/download/${photo.image_Url}`}
                                             alt="..."
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '2%' }}
+                                            style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '2%' }}
                                         />
                                     </Box>
                                 </Grid>

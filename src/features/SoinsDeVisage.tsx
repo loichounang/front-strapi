@@ -10,7 +10,7 @@ import PrestationSoinVisage from 'components/PrestationSoinVisage';
 
 const SoinsDeVisage = () => {
     const { getDefSoinsVisage } = useMainInformation();
-    const {data: SoinsVisages} = useQuery<IDefSoinVisage[]>( ['SoinVisage'], () => getDefSoinsVisage());
+    const {data: SoinsVisages} = useQuery<IDefSoinVisage[]>( ['DefSoinVisage'], () => getDefSoinsVisage());
 
     
   const [SoinVisage, setSoinsVisage] = useState<IDefSoinVisage>(defaultSoinsVisage);
@@ -21,10 +21,8 @@ const SoinsDeVisage = () => {
 }, [SoinsVisages]);
 
   return (
-    <Container maxWidth='xl'>
-        
-    <Box>
-    
+    <Container maxWidth='xl'>     
+    <Box> 
     <Grid container sx={{marginTop:'40px'}}>
       <Grid item xs={12} md={6}>
       <img src={`${globalConfig.get().apiUrl}/download/${SoinVisage.image_Url}`} height={520} width={600} alt='soins de visage' /> 
@@ -36,7 +34,7 @@ const SoinsDeVisage = () => {
       </Grid>
     </Grid>
     </Box>
-    <Typography sx={{marginTop:'30px'}}><PrestationSoinVisage/></Typography>
+   <PrestationSoinVisage/>
     </Container>
   )
 }

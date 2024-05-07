@@ -103,7 +103,8 @@ export interface IReservation {
 export interface IGaleryPhoto {
     id: number,
     image: string,
-    image_Url: string 
+    image_Url: string,
+    reference: string 
 }
 
 export interface IGaleryResultatSoins {
@@ -117,7 +118,13 @@ export interface IAstuce{
     titreAstuce: string,
     titreSecondaire : string,
     lienVideo1 : string,
-    lienVideo2 : string
+    lienVideo2 : string,
+    lienVideo3 : string,
+    lienVideo4 : string,
+    lienVideo5 : string,
+    lienVideo6 : string,
+    lienVideo7 : string,
+    lienVideo8 : string
 }
 
 export interface IArrierePlan {
@@ -241,7 +248,7 @@ export interface ISoinMinceur{
     prix : string
 }
 
-export interface ISoinVisage{
+export interface ISoinVisages{
     id: number;
     titre: string;
     duree : string;
@@ -360,7 +367,13 @@ export const defaultAstuce : IAstuce = {
     titreAstuce: "",
     titreSecondaire: "",
     lienVideo1: "",
-    lienVideo2: ""
+    lienVideo2: "",
+    lienVideo3: "",
+    lienVideo4: "",
+    lienVideo5: "",
+    lienVideo6: "",
+    lienVideo7: "",
+    lienVideo8: ""
 }
 
 export const defaultArrierePlan : IArrierePlan = {

@@ -15,8 +15,8 @@ export const defaultConfig : DynamicConfig = {
     applicationApiToken: '4fbsar144jfko8vfjx005ipaed',
 
     shineApiUrl: 'https://api.univ-shine.com/shine_server',
-    shineToken: '00-11-22',
-    shineInstanceId: 'instance19',
+    shineToken: 's7sfnb1qk9h7pq43vibtehxgh1',
+    shineInstanceId: 'instance22',
 
     environment: 'DEV'
 }

@@ -31,7 +31,7 @@ const PrestationBienEtre = () => {
 
   return (
     <Container maxWidth='xl'sx={{marginTop:'100px'}}>
-    <Container  maxWidth='xl' sx={{bgcolor:'#784828', color:'white'}}>
+    <Container  maxWidth='xl' sx={{bgcolor:'#DBA82F', color:'white'}}>
    <Grid container >
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
@@ -127,7 +127,7 @@ const PrestationBienEtre = () => {
   <Typography sx={{marginTop:'50px'}}></Typography>
     </Container>
 
-  <Container maxWidth='xl' sx={{bgcolor:'#784828', color:'white'}}>
+  <Container maxWidth='xl' sx={{bgcolor:'#DBA82F', color:'white'}}>
   <Grid container sx={{marginTop:'100px'}}>
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
@@ -221,7 +221,7 @@ const PrestationBienEtre = () => {
   <Typography sx={{marginTop:'50px'}}></Typography>
     </Container> 
 
-<Container maxWidth='xl' sx={{bgcolor:'#784828', color:'white'}}>
+<Container maxWidth='xl' sx={{bgcolor:'#DBA82F', color:'white'}}>
   <Grid container sx={{marginTop:'100px'}}>
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>

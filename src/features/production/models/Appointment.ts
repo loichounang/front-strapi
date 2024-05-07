@@ -1,5 +1,6 @@
 
 export interface IAppointment {
+    
     id: number,
 
     token: string,
@@ -12,6 +13,7 @@ export interface IAppointment {
     portable: string,
     whatsAppNumber: string,
     email: string,
+    serviceDescription: string,
 
     portable1: string,
     portable2: string,
@@ -69,7 +71,8 @@ export const defaultAppointment : IAppointment = {
     notificationDate: new Date(),
 
     services: [],
-    appointmentProducts: []
+    appointmentProducts: [],
+    serviceDescription: ""
 }
 
 

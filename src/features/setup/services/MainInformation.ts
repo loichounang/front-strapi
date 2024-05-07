@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisage, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire, IRelaxation, IOnglerie, IGaleryResultatSoins  } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire, IRelaxation, IOnglerie, IGaleryResultatSoins  } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -104,7 +104,7 @@ const _ = () => {
       return await data;
     }
 
-    const getSoinsVisage = async (pagination?: IPagination) : Promise<ISoinVisage[]> => {
+    const getSoinsVisage = async (pagination?: IPagination) : Promise<ISoinVisages[]> => {
       const pageSize = pagination?.pageSize ?? 50;
       const pageNumber = pagination?.pageNumber ?? 1;
 

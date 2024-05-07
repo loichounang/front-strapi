@@ -45,7 +45,7 @@ const SousMenus: React.FC<ServicesSubMenuProps> = ({ open, onClose}) => {
             </ListItem>
               <ListItem>
                 <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/bien-être" onClick={onClose}>
-                {t('BIEN-ETRE')}
+                {t('BIEN ETRE ET SPA')}
                 </Button>
               </ListItem>
               <ListItem>

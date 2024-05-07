@@ -168,6 +168,8 @@ export const AppointmentForm: FC<IAppointment> = (props: IAppointment = defaultA
 
   const watchFirstName = watch('firstName');
   const watchLastName = watch('lastName');
+  const watchServiceDescription = watch('serviceDescription');
+
   
 //   const watchName = watch('name');    
 //   const watchDescription = watch('description');    
@@ -326,6 +328,13 @@ const setFile = (_event: any) => {
             return;
           }
 
+          if(data.serviceDescription.trim() === '') {
+            enqueueSnackbar( t('description service is required'), { variant: 'warning',
+              anchorOrigin : { horizontal: 'center', vertical: 'top' }, autoHideDuration : 1500 }); 
+            setIsSaveLoading(false);
+            return;
+          }
+
           if( !data.services.some(x => x.isSelected) ) {
             enqueueSnackbar( t('There is no service selected'), { variant: 'warning',
               anchorOrigin : { horizontal: 'center', vertical: 'top' }, autoHideDuration : 1500 }); 
@@ -339,6 +348,7 @@ const setFile = (_event: any) => {
 
             portable1: data.portable,
             portable2: data.whatsAppNumber,
+            serviceDescription : data.serviceDescription,
             email1: data.email,
             email2: '',
             notificationDate: new Date(),
@@ -405,15 +415,29 @@ const setFile = (_event: any) => {
                                                                                 
                           </Box>  
                           <Box sx={{ mt: 1, width: '100%' }} >
-                              <TextField sx={{width:'calc(50% - 8px)'}} id="portable" label={t('Portable')} {...register('portable')}
+                              <TextField sx={{width:'calc(30% - 8px)'}} id="portable" label={t('Portable')} {...register('portable')}
                                 inputProps={ { autoComplete: 'new-password', style: {textTransform: 'none'} } } autoFocus  />
-                              <TextField sx={{width:'calc(50% - 8px)'}} id="whatsAppNumber" label={t('WhatsApp')} {...register('whatsAppNumber')}
+                              <TextField sx={{width:'calc(30% - 8px)'}} id="whatsAppNumber" label={t('WhatsApp')} {...register('whatsAppNumber')}
+                                inputProps={ { autoComplete: 'new-password', style: {textTransform: 'none'} } } autoFocus  /> 
+                                <TextField sx={{width:'calc(40% - 8px)'}} id="email" label={t('Email')} {...register('email')}
                                 inputProps={ { autoComplete: 'new-password', style: {textTransform: 'none'} } } autoFocus  /> 
                           </Box> 
-                          <Box sx={{ mt: 1, width: '100%' }} >                      
-                              <TextField sx={{width:'calc(100% - 8px)'}} id="email" label={t('Email')} {...register('email')}
-                                inputProps={ { autoComplete: 'new-password', style: {textTransform: 'none'} } } autoFocus  /> 
-                          </Box>                            
+        
+                          <Box sx={{ mt: 1, width: '100%' }}>
+  <TextField
+    fullWidth
+    multiline
+    rows={2}
+    sx={{ width: 'calc(100% - 8px)' }}
+    id="serviceDescription"
+    label={t('Service : Description')}
+    {...register('serviceDescription')}
+    inputProps={{ autoComplete: 'new-password', style: { textTransform: 'none' } }}
+    autoFocus
+  />
+</Box>
+
+                                                    
                         </Stack>                        
                       </Grid>
                     <Grid item xs={12} component={Paper} sx={{ borderRadius: 2, ml: 0, }} >

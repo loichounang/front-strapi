@@ -58,7 +58,7 @@ export function AppointmentFormDialog(props: AppointmentFormDialogProps)  {
   
   return (
       <FormDialog open={open} maxWidth='sm'
-        okText={t('Create appointement')} cancelText={t('Cancel')} title={`${t('Appointment')}...`} onCancel={()=> {setOpen(false);}} 
+        okText={t('Créer un rendez-vous')} cancelText={t('Cancel')} title={`${t('Appointment')}...`} onCancel={()=> {setOpen(false);}} 
         onClose={()=> {setOpen(false);}} onOk={handleSaveAppointment}  >
         <AppointmentForm {...defaultAppointment }  />
       </FormDialog>    

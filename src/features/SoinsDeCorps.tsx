@@ -7,6 +7,7 @@ import { IDefSoinCorps,  defaultSoinsCorps } from 'features/setup/models/MainInf
 import { globalConfig } from 'config';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import PrestationSoinCorps from 'components/PrestationSoinCorps';
+import PrestationSoinVisage from 'components/PrestationSoinCorps';
 
 const SoinsDeCorps = () => {
     const { getDefSoinsCorps } = useMainInformation();
