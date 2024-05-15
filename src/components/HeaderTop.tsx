@@ -43,7 +43,7 @@ const [mainInformation, setMainInformation] = useState<IMainInformation>(default
     sx={{backgroundImage: 'linear-gradient(to right, #371F07, #DBA82F)'}}>
         <Grid container justifyContent="space-around" alignItems="center">
           <Grid item>
-            <Typography variant="subtitle1" component="span" sx={{fontFamily:'Poppins'}}>
+            <Typography variant="subtitle1" component="span" sx={{fontFamily:'Poppins', color:'#fff'}}>
               <IconButton color="inherit">
                 <PhoneIcon />
               </IconButton>
@@ -51,7 +51,7 @@ const [mainInformation, setMainInformation] = useState<IMainInformation>(default
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="subtitle1" component="span" sx={{fontFamily:'Poppins'}}>
+            <Typography variant="subtitle1" component="span" sx={{fontFamily:'Poppins', color:'#fff'}}>
               <IconButton color="inherit">
                 <EmailIcon />
               </IconButton>
@@ -59,7 +59,7 @@ const [mainInformation, setMainInformation] = useState<IMainInformation>(default
             </Typography>
           </Grid>
           <Grid item>
-            <Typography variant="subtitle1" component="span" sx={{fontFamily:'Poppins'}}>
+            <Typography variant="subtitle1" component="span" sx={{fontFamily:'Poppins',color:'#fff'}}>
               {mainInformation.horaire1}
             </Typography>
           </Grid>

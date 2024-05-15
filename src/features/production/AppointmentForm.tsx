@@ -168,7 +168,7 @@ export const AppointmentForm: FC<IAppointment> = (props: IAppointment = defaultA
 
   const watchFirstName = watch('firstName');
   const watchLastName = watch('lastName');
-  const watchServiceDescription = watch('serviceDescription');
+
 
   
 //   const watchName = watch('name');    
@@ -328,12 +328,6 @@ const setFile = (_event: any) => {
             return;
           }
 
-          if(data.serviceDescription.trim() === '') {
-            enqueueSnackbar( t('description service is required'), { variant: 'warning',
-              anchorOrigin : { horizontal: 'center', vertical: 'top' }, autoHideDuration : 1500 }); 
-            setIsSaveLoading(false);
-            return;
-          }
 
           if( !data.services.some(x => x.isSelected) ) {
             enqueueSnackbar( t('There is no service selected'), { variant: 'warning',

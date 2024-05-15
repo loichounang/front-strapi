@@ -163,7 +163,7 @@ export const flexBetween = {
   }
 
   export const defaultAppTheme : IAppTheme = {
-    primary: "#EA489E", //"#F0F2F5", //"#FF957B", // "#435939", 
+    primary: "#DBA82F", //"#F0F2F5", //"#FF957B", // "#435939", //#EA489E
     secondary: "#0A1840",
     success: "#4CAF50",
     info: "#00a2ff",

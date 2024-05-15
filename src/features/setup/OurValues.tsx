@@ -78,7 +78,7 @@ const [valueDefinition, setValueDefinition] = useState<IValueDefintion>(defaultV
                     (values || []).map( (val, idx) => 
                       (<ListItem key={` val ${idx} ${val.principale}`}>
                         <ListItemIcon>
-                          <DoneIcon sx={{ color: '#EA489E' }} />
+                          <DoneIcon sx={{ color: '#DBA82F' }} />
                         </ListItemIcon>
                         <ListItemText> 
                           <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'700'}}>
