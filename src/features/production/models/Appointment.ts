@@ -27,11 +27,9 @@ export interface IAppointment {
 
 export interface IService {
     id: number,
-
     type: string,
     serviceId: number,
     packagingId: number,
-
     nom: string,
     isSelected: boolean
 }
