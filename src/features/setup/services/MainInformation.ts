@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire, IRelaxation, IOnglerie, IGaleryResultatSoins  } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire,  IOnglerie, IGaleryResultatSoins, IDefFormation, IFormation, ICoiffure, IDefRelooking, IRelookingMicropigmentation } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -200,13 +200,13 @@ const _ = () => {
       return await data;
     }
 
-    const getRelaxation = async (pagination?: IPagination) : Promise<IRelaxation[]> => {
+    const getCoiffure = async (pagination?: IPagination) : Promise<ICoiffure[]> => {
       const pageSize = pagination?.pageSize ?? 50;
       const pageNumber = pagination?.pageNumber ?? 1;
 
       //const {name, description, phoneNumber} = criteria;
       
-      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/relaxation/get-contents`));
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/coiffure/get-contents`));
       return await data;
     }
 
@@ -380,6 +380,42 @@ const _ = () => {
      
       return data;
     };
+
+    const getDefFormations = async ( pagination?: IPagination): Promise<IDefFormation[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defFormation/get-contents`));
+     
+      return data;
+    };
+
+    const getFormations = async ( pagination?: IPagination): Promise<IFormation[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/formation/get-contents`));
+     
+      return data;
+    };
+
+    const getDefRelooking = async ( pagination?: IPagination): Promise<IDefRelooking[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defRelooking/get-contents`));
+     
+      return data;
+    };
+    
+    const getRelooking = async ( pagination?: IPagination): Promise<IRelookingMicropigmentation[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/relooking/get-contents`));
+     
+      return data;
+    };
     
 
     
@@ -420,7 +456,7 @@ const _ = () => {
       getVajacial,
       getEpilationCire,
       getSoinAmincissant,
-      getRelaxation,
+      getCoiffure,
 
       getReservations,
 
@@ -434,7 +470,13 @@ const _ = () => {
       getAboutsPage,
 
       getPoseGelPage,
-      getPoseVernisPage
+      getPoseVernisPage,
+
+      getDefFormations,
+      getFormations,
+
+      getDefRelooking,
+      getRelooking
     } 
 }
 

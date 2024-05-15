@@ -84,7 +84,7 @@ const PrestationSoinCorps = () => {
        <Grid item xs={12} md={8}>
        <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
              <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-               {t('Epilation laser définitive diode')}
+               {t('Epilation laser ')}
              </Typography>                
            </Box>
        </Grid>
@@ -179,7 +179,7 @@ const PrestationSoinCorps = () => {
        <Grid item xs={12} md={8}>
        <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
              <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-               {t('Package soins de corps')}
+               {t('Packages')}
              </Typography>                
            </Box>
        </Grid>

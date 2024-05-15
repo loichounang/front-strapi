@@ -47,7 +47,8 @@ import BienEtre from 'features/BienEtre';
 import GalerySpa from 'features/GalerySpa';
 import ResultatSoins from 'features/ResultatSoins';
 import Reservations from 'features/Reservations';
-
+import Formations from 'features/Formations';
+import RelookingMicropigmentaion from 'features/RelookingMicropigmentaion';
 
 
             
@@ -81,6 +82,8 @@ export const AppRoute = () => {
         <Route path='/bien-être' element={<BienEtre/>} />
         <Route path="/les-resultats-de-nos-soins" element={<ResultatSoins/>} />
         <Route path="/reservation" element={<Reservations />} />
+        <Route path="/formation" element={<Formations />} />
+        <Route path='/relooking-micropigmentation' element={<RelookingMicropigmentaion/>}  />
 
         
        

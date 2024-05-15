@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {IReservation,defaultReservation, IMassage,IRelaxation,IEpilation,ISoinAmincissant,IVajacial } from '../features/setup/models/MainInformation'; 
+import {IReservation,defaultReservation, IMassage,ICoiffure,IEpilation,ISoinAmincissant,IVajacial } from '../features/setup/models/MainInformation'; 
 import { Grid, Container, Typography,Stack,Box, Button } from '@mui/material';
 import useMainInformation from 'features/setup/services/MainInformation';
 import { useQuery } from 'react-query';
@@ -12,12 +12,12 @@ import { useTranslation } from 'react-i18next';
 
 const PrestationBienEtre = () => {
     const { t, i18n } = useTranslation();
-    const {  getReservations, getMassage, getEpilationCire, getSoinAmincissant, getRelaxation,getVajacial } = useMainInformation();
+    const {  getReservations, getMassage, getEpilationCire, getSoinAmincissant, getCoiffure,getVajacial } = useMainInformation();
     const {data: massages} = useQuery<IMassage[]>( ['Massage'], () => getMassage());
     const {data: epilations} = useQuery<IEpilation[]>( ['Epilation'], () => getEpilationCire());
-    const {data: soinsAmincissants} = useQuery<IRelaxation[]>( ['SoinMinceur'], () => getSoinAmincissant());
-    const {data: relaxations} = useQuery<ISoinAmincissant[]>( ['PackageSoinCorps'], () => getRelaxation());
-    const {data: vajacials} = useQuery<IVajacial[]>( ['PackageSoinCorps'], () => getVajacial());
+    const {data: soinsAmincissants} = useQuery<ISoinAmincissant[]>( ['SoinAmincissant'], () => getSoinAmincissant());
+    const {data: coiffures} = useQuery<ICoiffure[]>( ['Coiffure'], () => getCoiffure());
+    const {data: vajacials} = useQuery<IVajacial[]>( ['Vajacial'], () => getVajacial());
 
     const {data: reservations} = useQuery<IReservation[]>( ['Reservation'], () => getReservations());
     const [openAppointmentForm, setOpenAppointmentForm] = useState<boolean>(false);
@@ -36,7 +36,7 @@ const PrestationBienEtre = () => {
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
                 <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-                  {t('Bien-être & rélaxation')}
+                  {t('Coiffure')}
                 </Typography>                
               </Box>
           </Grid>
@@ -44,13 +44,13 @@ const PrestationBienEtre = () => {
           <Grid item xs={12} md={4}></Grid>
         </Grid>
       
-    <Grid container spacing={1}>
-      {( relaxations || []).map( (relaxation, idx) => (
+    <Grid container item spacing={2}>
+      {( coiffures || []).map( (coiffure, idx) => (
         
-        <Grid xs={12}  md={4} key={relaxation.id}>
-          <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{relaxation.titre}</Typography>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{relaxation.duree}</Typography>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{relaxation.prix}</Typography>
+        <Grid item xs={6}  md={3} key={coiffure.id}>
+          <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{coiffure.titre}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{coiffure.duree}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{coiffure.prix}</Typography>
           <Typography sx={{marginTop:'13px'}}></Typography>
         </Grid>
         
@@ -180,7 +180,7 @@ const PrestationBienEtre = () => {
           <Grid item xs={12} md={7}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
                 <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-                  {t('Soin amincissant sauna couverture chauffante')}
+                  {t('Soin amincissant')}
                 </Typography>                
               </Box>
           </Grid>
@@ -225,7 +225,7 @@ const PrestationBienEtre = () => {
   <Grid container sx={{marginTop:'100px'}}>
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
-                <Typography variant="h1" sx={{fontSize:'40px'}} {...typographySmallHandWriting}> 
+                <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
                   {t('Vajacial')}
                 </Typography>                
               </Box>
@@ -237,7 +237,7 @@ const PrestationBienEtre = () => {
     <Grid container item>
       {( vajacials || []).map( (vajacial, idx) => (
         
-        <Grid xs={12} md={6} key={vajacial.id}>
+        <Grid xs={6} md={4} key={vajacial.id}>
           <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{vajacial.titre}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{vajacial.duree}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{vajacial.prix}</Typography>

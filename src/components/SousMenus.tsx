@@ -49,7 +49,7 @@ const SousMenus: React.FC<ServicesSubMenuProps> = ({ open, onClose}) => {
                 </Button>
               </ListItem>
               <ListItem>
-                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="#" onClick={onClose}>
+                <Button sx={{ fontFamily:'Poppins', color:'#000', fontWeight:'400'  }} component={Link} to="/relooking-micropigmentation" onClick={onClose}>
                 {t('RELOOKING VISAGE ET MICRO PIGMENTATION')}
                 </Button>
               </ListItem>

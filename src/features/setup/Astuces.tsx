@@ -81,47 +81,36 @@ const Astuces = () => {
 
   return (
     <Container maxWidth='xl' sx={{marginTop : '10px'}}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} md={7}>
-          <Box  textAlign="justify">
-            <Title sx={{fontSize: '45px'}} {...typographySmallHandWriting}>{astuceInformation.titreAstuce}</Title>
-            <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'justify' }}>
-              <Subtitle>{astuceInformation.titreSecondaire}</Subtitle>
-            </Box>
+    <Grid container spacing={2}>
+      <Grid item xs={12} md={7}>
+        <Box  textAlign="justify">
+          <Title sx={{fontSize: '45px'}} {...typographySmallHandWriting}>{astuceInformation.titreAstuce}</Title>
+          <Box sx={{ mt: 1, width: '100%', display: 'flex', justifyContent: 'justify' }}>
+            <Subtitle>{astuceInformation.titreSecondaire}</Subtitle>
           </Box>
-        </Grid>
-        <Grid item xs={12} md={5}></Grid>
+        </Box>
       </Grid>
+      <Grid item xs={12} md={5}></Grid>
+    </Grid>
 
-      <Slider {...sliderSettings} >
-        {/* Vidéo 1 */}
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo1} opts={opts} />
+    <Slider {...sliderSettings} >
+      {/* Filtrer et mapper les vidéos non vides */}
+      {[
+        astuceInformation.lienVideo1,
+        astuceInformation.lienVideo2,
+        astuceInformation.lienVideo3,
+        astuceInformation.lienVideo4,
+        astuceInformation.lienVideo5,
+        astuceInformation.lienVideo6,
+        astuceInformation.lienVideo7,
+        astuceInformation.lienVideo8
+      ].filter(video => video !== '').map((videoId, index) => (
+        <div key={index}>
+          <YouTube videoId={videoId} opts={opts} />
         </div>
-        {/* Vidéo 2 */}
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo2} opts={opts} />
-        </div>
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo3} opts={opts} />
-        </div>
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo4}  opts={opts} />
-        </div>
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo5}  opts={opts} />
-        </div>
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo6}  opts={opts} />
-        </div>
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo7}  opts={opts} />
-        </div>
-        <div>
-          <YouTube videoId={astuceInformation.lienVideo8}  opts={opts} />
-        </div>
-      </Slider>
-    </Container>
+      ))}
+    </Slider>
+  </Container>
   );
 }
 

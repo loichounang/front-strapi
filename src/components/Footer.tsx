@@ -134,6 +134,12 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
               {`${t(('Contact'))} `}
               </Link>   
             </Box>
+
+            <Box sx={{ mt: 0.25, width: '100%' }} > 
+              <Link to='/formation'  style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
+              {`${t(('Formations'))} `}
+              </Link>   
+            </Box>
           </Stack>
         </Grid>
         
@@ -172,7 +178,7 @@ const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
             </Box>
 
             <Box sx={{ mt: 0.25, width: '100%' }} > 
-            <Link to='#'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
+            <Link to='/relooking-micropigmentation'   style={{ fontFamily:'Poppins', fontWeight:'500', color: 'white', textDecoration:'none'}}  >
               {`${t(('Relooking visage et micro pigmentation'))} `}
               </Link>   
             </Box>

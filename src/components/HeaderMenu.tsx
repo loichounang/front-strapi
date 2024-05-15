@@ -126,6 +126,7 @@ const handleSubMenuClose = () => {
 <Button color="inherit" component={Link} to="/les-resultats-de-nos-soins" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Résultats de nos soins').toUpperCase()}</Button>
       <Button color="inherit" component={Link} to="/le-spa-en-image" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' }}}>{t('Spa en image').toUpperCase()}</Button>
       <Button color="inherit" component={Link} to="/contact" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Contact').toUpperCase()}</Button>
+      <Button color="inherit" component={Link} to="/formation" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Formations').toUpperCase()}</Button>
       <Button color="inherit" component={Link} to="/reservation" sx={{ color: 'black', fontWeight: 'bold', fontSize: '0.75rem', fontFamily:'Poppins', '&:hover': { color: '#DBA82F' } }}>{t('Reservation').toUpperCase()}</Button>
     </Grid>  
 
@@ -168,7 +169,7 @@ const handleSubMenuClose = () => {
               <Typography variant="body1" fontWeight="bold" color="black">Bien être et Spa</Typography>
             </MenuItem>
             <Divider />
-            <MenuItem onClick={() => { navigate('#'); handleClose(); }}>
+            <MenuItem onClick={() => { navigate('relooking-micropigmentation'); handleClose(); }}>
               <Typography variant="body1" fontWeight="bold" color="black">Relooking visage et micro pigmentation</Typography>
             </MenuItem>
             <Divider />
@@ -185,6 +186,10 @@ const handleSubMenuClose = () => {
         <Divider />
         <MenuItem onClick={() => { navigate('contact'); handleClose(); }}>
           <Typography variant="body1" fontWeight="bold" color="black">Contact</Typography>
+        </MenuItem>
+        <Divider />
+        <MenuItem onClick={() => { navigate('formation'); handleClose(); }}>
+          <Typography variant="body1" fontWeight="bold" color="black">Formations</Typography>
         </MenuItem>
         <Divider />
         <MenuItem onClick={() => { navigate('reservation'); handleClose(); }}>

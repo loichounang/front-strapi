@@ -72,7 +72,7 @@ export const defaultAppointment : IAppointment = {
 
     services: [],
     appointmentProducts: [],
-    serviceDescription: ""
+    serviceDescription: ''
 }
 
 

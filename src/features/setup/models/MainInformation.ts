@@ -13,7 +13,9 @@ export interface IMainInformation {
     lienLinkedin : string,
     lienTwitter : string,
     lienInstagram : string,
-    localisation : string
+    localisation : string,
+    portable2: string,
+    localisation2: string
 }
 
 export interface IIMage4Carousel {
@@ -211,6 +213,20 @@ export interface IDefMainPied{
     titreSecondaire : string;
 }
 
+export interface IDefRelooking{
+    id: number;
+    image : string;
+    image_Url : string;
+    titrePrincipal : string;
+    titreSecondaire : string;
+}
+
+export interface IRelookingMicropigmentation {
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
 
 export interface IDefBienEtre{
     id: number;
@@ -262,7 +278,7 @@ export interface IMassage{
     prix : string
 }
 
-export interface IRelaxation{
+export interface ICoiffure{
     id: number;
     titre: string;
     duree : string;
@@ -297,6 +313,22 @@ export interface IOnglerie{
     prix : string
 }
 
+export interface IDefFormation{
+    id: number;
+    titreGlobal: string;
+    image : string;
+    image_Url : string;
+    description : string
+}
+
+export interface IFormation {
+    id: number,
+    titreGlobal: string,
+    description: string,   
+    image: string,
+    image_Url: string 
+}
+
 
 export const defaultMainInformation : IMainInformation = {
     id: 0,
@@ -312,7 +344,9 @@ export const defaultMainInformation : IMainInformation = {
     lienLinkedin: "",
     lienTwitter: "",
     lienInstagram: "",
-    localisation: ""
+    localisation: "",
+    portable2: "",
+    localisation2: ""
 }
 
 export const defaultIMage4Carousel : IIMage4Carousel = {
@@ -470,3 +504,20 @@ export const defaultBienEtre : IDefBienEtre = {
     titreSecondaire: "",
     
 }
+
+export const defaultRelookingMicropigmentation : IDefRelooking = {
+    id: 0,
+    image: "",
+    image_Url: "",
+    titrePrincipal: "",
+    titreSecondaire: ""
+}
+
+export const defaultDefFormation : IDefFormation = {
+    id: 0,
+    titreGlobal: "",
+    image: "",
+    image_Url: "",
+    description: ""
+}
+
