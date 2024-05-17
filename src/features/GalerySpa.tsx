@@ -5,20 +5,29 @@ import { Grid, Typography, Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import { globalConfig } from 'config';
-import { IGaleryPhoto } from 'features/setup/models/MainInformation';
+import { IGaleryPhoto, IDefSpa, defaultSpaImage } from 'features/setup/models/MainInformation';
 import useMainInformation from 'features/setup/services/MainInformation';
 import Reservation from './setup/Reservation';
 import { typographyBigGroupBoxStyling,typographySmallHandWriting } from 'themes/commonStyles';
+import { isFalsy } from 'utility-types';
 
 const GalerySpa = () => {
     const { t } = useTranslation();
-    const { getGaleryPhotos } = useMainInformation();
+    const { getGaleryPhotos, getDefSpaImage } = useMainInformation();
     const { data: galeryPhotos } = useQuery<IGaleryPhoto[]>(['GaleryPhoto'], () => getGaleryPhotos());
     const [photos, setPhotos] = useState<IGaleryPhoto[]>([]);
+    const { data: spaImage } = useQuery<IDefSpa[]>(['DefSpa'], () => getDefSpaImage());
+    const [spas, setSpa] = useState<IDefSpa>(defaultSpaImage);
 
     useEffect(() => {
         setPhotos(galeryPhotos || []);
     }, [galeryPhotos]);
+
+    useEffect(() => {
+        if (!isFalsy(spaImage ) && spaImage.length > 0)
+            setSpa(spaImage[0]);
+      }, [spaImage ]);
+  
 
     return (
         <Container maxWidth='xl'>
@@ -27,11 +36,11 @@ const GalerySpa = () => {
                     
                         <Box sx={{ mt: 0.25, width: '100%' }}>
                             <Typography component="h2" sx={{fontSize:'40px'}} {...typographySmallHandWriting} id="tableTitle" color="black" noWrap>
-                                {t('Le SPA en image')}
+                                {spas.titrePrincipal}
                             </Typography>
 
                             <Typography variant='h6' sx={{fontFamily:'Poppins', color:'black', textAlign:'justify'}}>
-                                {t("Découvrez des photos de luxueux centres de bien-être, des jacuzzis à l’extérieur, des saunas et des salles de soins élégantes. Laissez-vous inspirer par les images de thérapeutes expérimentés prodiguant des soins de la tête aux pieds, de la réflexologie aux massages profonds, dans des environnements calmes et apaisants.")}
+                                {spas.titreSecondaire}
                             </Typography>
                         </Box>
                 </Grid>

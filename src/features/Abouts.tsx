@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from 'react-query';
 import useMainInformation from "./setup/services/MainInformation";
-import { IAboutPage, defaultABoutPage } from './setup/models/MainInformation';
+import { IAboutPage, defaultABoutPage, IQuestions } from './setup/models/MainInformation';
 import { isFalsy } from 'utility-types';
 import { Typography, Box, Link, Divider, Container, Icon,Grid, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import { globalConfig } from 'config';
@@ -26,7 +26,8 @@ const Abouts: React.FC = () => {
     setExpanded(isExpanded ? panel : false);
   };
   const { t, i18n } = useTranslation();
-  const {  getAboutsPage} = useMainInformation();
+  const {  getAboutsPage, getQuestions} = useMainInformation();
+  const {data: questionInformation} = useQuery<IQuestions[]>( ['Questions'], () =>  getQuestions());
   const { data: aboutData } = useQuery<IAboutPage[]>(['AboutPage'], () => getAboutsPage());
   const [aboutInformation, setMainInformations] = useState<IAboutPage>(defaultABoutPage);
 
@@ -59,10 +60,10 @@ const Abouts: React.FC = () => {
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
                 <Typography variant="h1" sx={{fontSize:'40px'}} {...typographySmallHandWriting}> 
-                  {t('Faites vos soins chez nous')}
+                {aboutInformation.titre3}
                 </Typography>                
               </Box>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{t('Ambiance feutrée, cadre intimistes, senteurs envoûtantes : abandonnez-vous au plaisir des sens. Ici, seul l’instant présent compte !')}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{aboutInformation.sousTitre3}</Typography>
           </Grid>
           <Grid item xs={12} md={4}></Grid>
         </Grid>  
@@ -74,8 +75,8 @@ const Abouts: React.FC = () => {
     <Grid item xs={12} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
     <Typography sx={{marginTop:'20px' }}></Typography>
     <TeamsIcon sx={{ fontSize: 45, marginBottom: '10px' }}/>
-      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{t('Professional Care')}</Typography>
-      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{t('Tous les produits que nous utilisons sont professionnels et ont une efficacité prouvée. Non compromis.')}</Typography>
+      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{aboutInformation.titre4}</Typography>
+      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{aboutInformation.sousTitre4}</Typography>
       <Typography sx={{marginTop:'20px' }}></Typography>
     </Grid>
     <Typography sx={{marginTop:'30px'}}></Typography> 
@@ -83,24 +84,24 @@ const Abouts: React.FC = () => {
     <Grid item xs={12} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
     <Typography sx={{marginTop:'20px' }}></Typography>
     <LaboratoryIcon sx={{ fontSize: 45, marginBottom: '10px' }} />
-      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{t('Formule non-toxique')}</Typography>
-      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{t('Ne vous inquiétez pas, tous nos vernis à ongles et autres produits autres produits sont non-toxiques. Nous nous nous nous soucions de vous et de nos spécialistes.')}</Typography>
+      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{aboutInformation.titre5}</Typography>
+      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{aboutInformation.sousTitre5}</Typography>
       <Typography sx={{marginTop:'20px' }}></Typography>
     </Grid>
 
     <Grid item xs={12} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
     <Typography sx={{marginTop:'20px' }}></Typography>
     <FilterVintageIcon sx={{ fontSize: 45, marginBottom: '10px' }} />
-      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{t('Green Beauty')}</Typography>
-      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{t('Toutes les formules de cosmétiques sont biologiques. La majorité de tous les ingrédients sont naturels.')}</Typography>
+      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{aboutInformation.titre6}</Typography>
+      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{aboutInformation.sousTitre6}</Typography>
       <Typography sx={{marginTop:'20px' }}></Typography>
     </Grid>
 
     <Grid item xs={12} md={3} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
     <Typography sx={{marginTop:'20px' }}></Typography>
     <FavoriteIcon sx={{ fontSize: 45, marginBottom: '10px' }} />
-      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{t('Nous aimons ce que nous faisons')}</Typography>
-      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{t("Les gens que vous rencontrerez dans notre studio font un travail qu'ils aiment. Venez et assurez-vous qu'il y a une différence.")}</Typography>
+      <Typography variant="h6" sx={{ fontFamily:'Poppins', fontWeight:'bold'}}>{aboutInformation.titre7}</Typography>
+      <Typography variant='body1' sx={{ fontFamily:'Poppins', textAlign:'justify'}}>{aboutInformation.sousTitre7}</Typography>
       <Typography sx={{marginTop:'20px' }}></Typography>
     </Grid>
    
@@ -116,8 +117,10 @@ const Abouts: React.FC = () => {
               </Box>  
 </Grid>
 <Grid item xs={12} md={6}>
-<Typography variant='h6' sx={{fontFamily:'Poppins', marginTop:'100px'}}>Pourquoi ai-je créé {aboutInformation.titreGlobal}?</Typography>
+<Typography variant='h6' sx={{fontFamily:'Poppins', marginTop:'60px'}}>{aboutInformation.titre}</Typography>
   <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{aboutInformation.description}</Typography>
+  <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{aboutInformation.titre1}</Typography>
+  <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{aboutInformation.titre2}</Typography>
 
 </Grid>
 </Grid>
@@ -132,11 +135,11 @@ const Abouts: React.FC = () => {
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
                 <Typography variant="h1" sx={{fontSize:'40px'}} {...typographySmallHandWriting}> 
-                  {t('Questions fréquemment posées')}
+                {aboutInformation.titre9}
                 </Typography>                
               </Box>
               <Typography sx={{marginTop:'15px'}}></Typography>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{t('Vous trouverez ici les réponses aux questions les plus fréquemment posées. Si vous ne trouvez pas la réponse, n’hésitez pas à nous contacter par courriel ou par téléphone.')}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{aboutInformation.sousTitre9}</Typography>
           </Grid>
           <Grid item xs={12} md={4}></Grid>
         </Grid>
@@ -144,54 +147,22 @@ const Abouts: React.FC = () => {
       </Container>
       <Typography sx={{marginTop:'30px'}}></Typography>
     <Grid container justifyContent="center" spacing={2}  >
-      <Grid item xs={12} md={6}>
-        <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1bh-content" id="panel1bh-header">
-            <Typography variant="h6">Soins du visage</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2bh-content" id="panel2bh-header">
-            <Typography variant="h6">Soins du corps</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3bh-content" id="panel3bh-header">
-            <Typography variant="h6">Manucure et pédicure</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
-            <Typography variant="h6">Massage et relaxation</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </Grid>
+    <Grid container spacing={3}>
+      {questionInformation && questionInformation.map(question => (
+        <Grid item xs={12} md={6} key={question.id}>
+          <Accordion expanded={expanded === `panel${question.id}`} onChange={handleChange(`panel${question.id}`)}>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls={`panel${question.id}bh-content`} id={`panel${question.id}bh-header`}>
+              <Typography variant="h6">{question.titreQuestion}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                {question.question}
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Grid>
+      ))}
+    </Grid>
     </Grid>
     </Container>
     <Typography sx={{marginTop:'30px'}}></Typography>

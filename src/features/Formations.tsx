@@ -148,10 +148,10 @@ const Formations = () => {
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
                 <Typography variant="h1" sx={{fontSize:'40px'}} {...typographySmallHandWriting}> 
-                  {t('NOS FORMATIONS')}
+                {formations.titre1}
                 </Typography>                
               </Box>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{t("Découvrez notre gamme de formations en beauté, comprenant des cours de maquillage professionnel, d'extension de cils, de micropigmentation et bien plus encore. Avec des instructeurs expérimentés et des programmes personnalisés, vous pouvez développer vos compétences et réaliser votre passion dans l'industrie de la beauté en un rien de temps")}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{formations.sousTitre1}</Typography>
           </Grid>
           <Grid item xs={12} md={4}></Grid>
         </Grid>

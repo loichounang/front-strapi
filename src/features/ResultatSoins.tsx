@@ -2,22 +2,31 @@ import { Box, Container, Grid, Typography, Stack } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { typographyBigGroupBoxStyling, typographyGroupBoxStyling, typographySmallHandWriting } from 'themes/commonStyles';
-import { IGaleryResultatSoins } from 'features/setup/models/MainInformation';
+import { IDefResultatSoins, IGaleryResultatSoins, defaultResultatSoins } from 'features/setup/models/MainInformation';
 import useMainInformation from 'features/setup/services/MainInformation';
 import { useQuery } from 'react-query';
 import { globalConfig } from 'config';
 import Testimonials from './setup/Testimonials';
+import { isFalsy } from 'utility-types';
 
 
 const ResultatSoins = () => {
   const { t, i18n } = useTranslation();
-  const {getGaleryResultatSoins  } = useMainInformation();
+  const {getGaleryResultatSoins, getDefResultatSoins  } = useMainInformation();
     const { data: ResultatSoins } = useQuery<IGaleryResultatSoins[]>(['ResultatSoins'], () => getGaleryResultatSoins());
     const [photos, setPhotos] = useState<IGaleryResultatSoins[]>([]);
+    const { data: resultats } = useQuery<IDefResultatSoins[]>(['DefResultatSoins'], () => getDefResultatSoins ());
+    const [resultat, setResultats] = useState<IDefResultatSoins>(defaultResultatSoins);
 
     useEffect(() => {
         setPhotos(ResultatSoins || []);
     }, [ResultatSoins]);
+
+    useEffect(() => {
+      if (!isFalsy(resultats ) && resultats.length > 0)
+        setResultats(resultats[0]);
+    }, [resultats ]);
+
   return (
     <Box>
        <Container maxWidth='xl' sx={{marginTop:'70px' }}>
@@ -25,11 +34,11 @@ const ResultatSoins = () => {
           <Grid item xs={12} md={8}>
           <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
                 <Typography variant="h1" sx={{fontSize:'40px'}} {...typographySmallHandWriting}> 
-                  {t('Les résultats de nos soins')}
+                  {resultat.titreGlobal}
                 </Typography>                
               </Box>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{t('Nous sommes fiers de partager avec vous les transformations incroyables que nos clients ont connues grâce à nos soins d’esthétique de qualité.')}</Typography>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{t('Nous comprenons à quel point il est important de se sentir bien dans sa peau. C’est pourquoi nous offrons une gamme de soins esthétiques personnalisés, adaptés à vos besoins et à vos préférences. Notre équipe de professionnels qualifiés est là pour vous aider à atteindre vos objectifs de beauté et de bien-être.')}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{resultat.titrePrincipal}</Typography>
+          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{resultat.titreSecondaire}</Typography>
           </Grid>
           <Grid item xs={12} md={4}></Grid>
         </Grid>

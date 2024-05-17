@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire,  IOnglerie, IGaleryResultatSoins, IDefFormation, IFormation, ICoiffure, IDefRelooking, IRelookingMicropigmentation } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire,  IOnglerie, IGaleryResultatSoins, IDefFormation, IFormation, ICoiffure, IDefRelooking, IRelookingMicropigmentation, ITestimonial, IAvis, IDefResultatSoins, IDefSpa, IQuestions } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -416,7 +416,54 @@ const _ = () => {
      
       return data;
     };
+
+    const getTestimonials = async ( pagination?: IPagination): Promise<ITestimonial[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
     
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/testimonial/get-contents`));
+     
+      return data;
+    };
+    
+    const getAvisApprenants = async ( pagination?: IPagination): Promise<IAvis[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/avis/get-contents`));
+     
+      return data;
+    };
+
+    const getDefResultatSoins = async ( pagination?: IPagination): Promise<IDefResultatSoins[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defResultat/get-contents`));
+     
+      return data;
+    };
+
+
+    const getDefSpaImage = async ( pagination?: IPagination): Promise<IDefSpa[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/defSpa/get-contents`));
+     
+      return data;
+    };
+
+
+    const getQuestions = async ( pagination?: IPagination): Promise<IQuestions[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+    
+      const { data } = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/questions/get-contents`));
+     
+      return data;
+    };
+
 
     
 
@@ -476,7 +523,13 @@ const _ = () => {
       getFormations,
 
       getDefRelooking,
-      getRelooking
+      getRelooking,
+      getTestimonials,
+      getAvisApprenants,
+
+      getQuestions,
+      getDefResultatSoins,
+      getDefSpaImage
     } 
 }
 

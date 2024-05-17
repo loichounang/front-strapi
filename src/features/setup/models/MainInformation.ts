@@ -151,7 +151,24 @@ export interface IAboutPage {
     profil1_Url: string,
     profil2 : string,
     profil2_Url: string,
-    description:string
+    description:string,
+    titre:string,
+    titre1:string,
+    titre2:string,
+    titre3: string,
+    sousTitre3: string,
+    titre4 : string,
+    sousTitre4:string,
+    titre5:string,
+    sousTitre5:string,
+    titre6 : string,
+    sousTitre6: string,
+    titre7:string,
+    sousTitre7:string,
+    titre8:string,
+    sousTitre8:string,
+    titre9:string,
+    sousTitre9 : string
 
 }
 
@@ -318,7 +335,11 @@ export interface IDefFormation{
     titreGlobal: string;
     image : string;
     image_Url : string;
-    description : string
+    description : string,
+    titre1:string,
+    sousTitre1:string,
+    titre2:string,
+    sousTitre2:string
 }
 
 export interface IFormation {
@@ -327,6 +348,51 @@ export interface IFormation {
     description: string,   
     image: string,
     image_Url: string 
+}
+
+export interface ITestimonial {
+    id: number,
+    nom : string,
+    commentaires : string
+}
+
+export interface IAvis {
+    id: number,
+    nom : string,
+    commentaires : string,
+    date : string
+}
+
+export interface IQuestions {
+    id: number,
+    titreQuestion:string,
+    question:string
+}
+
+export interface IDefResultatSoins{
+    id: number;
+    titreGlobal:string,
+    titrePrincipal : string,
+    titreSecondaire:string
+}
+
+export interface IDefSpa{
+    id: number;
+    titrePrincipal : string;
+    titreSecondaire : string;
+}
+
+export const defaultResultatSoins : IDefResultatSoins = {
+    id: 0,
+    titreGlobal: '',
+    titrePrincipal: '',
+    titreSecondaire: ''
+}
+
+export const defaultSpaImage : IDefSpa = {
+    id: 0,
+    titrePrincipal: "",
+    titreSecondaire: ""
 }
 
 
@@ -433,7 +499,24 @@ export const defaultABoutPage : IAboutPage = {
     profil1_Url: "",
     profil2: "",
     profil2_Url: "",
-    description: ""
+    description: "",
+    titre: "",
+    titre1: "",
+    titre2: "",
+    titre3: "",
+    sousTitre3: "",
+    titre4: "",
+    sousTitre4: "",
+    titre5: "",
+    sousTitre5: "",
+    titre6: "",
+    sousTitre6: "",
+    titre7: "",
+    sousTitre7: "",
+    titre8: "",
+    sousTitre8: "",
+    titre9: "",
+    sousTitre9: ""
 }
 
 export const defaultPoseGelPage : IPoseGel = {
@@ -518,6 +601,10 @@ export const defaultDefFormation : IDefFormation = {
     titreGlobal: "",
     image: "",
     image_Url: "",
-    description: ""
+    description: "",
+    titre1: "",
+    sousTitre1: "",
+    titre2: "",
+    sousTitre2: ""
 }
 
