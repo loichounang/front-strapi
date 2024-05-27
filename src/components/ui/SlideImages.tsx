@@ -35,7 +35,7 @@ const SlideImages = (props : SlideImagesProps) => {
       {
         breakpoint: 572,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
     ],

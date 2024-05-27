@@ -25,7 +25,7 @@ const SoinsDeVisage = () => {
     <Box> 
     <Grid container sx={{marginTop:'40px'}}>
       <Grid item xs={12} md={6}>
-      <img src={`${globalConfig.get().apiUrl}/download/${SoinVisage.image_Url}`} height={520} width={600} alt='soins de visage' /> 
+      <img src={`${globalConfig.get().apiUrl}/download/${SoinVisage.image_Url}`} height={520} style={{width:'100%'}}alt='soins de visage' /> 
       </Grid>
       <Grid xs={12} md={6} >
         <Typography variant='h3' sx={{marginTop:'110px', fontFamily:'Poppins'}}>{SoinVisage.titrePrincipal}</Typography>

@@ -12,13 +12,16 @@ import { styled } from '@mui/material/styles';
 
 
 const CustomTextField = styled(TextField)({
-  '& input': {
-    color: '#fff', // Couleur du texte lorsque le champ de texte est en focus
+  '& input, & textarea': {
+    color: '#fff', // Couleur du texte par défaut
     fontFamily: 'Poppins',
   },
-  '& input::placeholder': {
+  '& input::placeholder, & textarea::placeholder': {
+    color: '#fff', // Couleur du placeholder
     fontFamily: 'Poppins',
-    color: '#fff',
+  },
+  '& input:focus, & textarea:focus': {
+    color: '#fff', // Couleur du texte lorsqu'en focus
   }
 });
 
@@ -125,9 +128,11 @@ const Contact: React.FC = () =>  {
       <Typography variant="body1" sx={{ color: '#371F07', fontFamily:'Poppins', fontWeight:'bold' }}>{t('OBJET DU MESSAGE')}</Typography>
       <CustomTextField fullWidth placeholder='Ex : Demande de devis' sx={{ bgcolor: '#371F07', height:'40px' }} />
     </Grid>
+    
+    
     <Grid item xs={12}>
       <Typography variant="body1" sx={{ color: '#371F07', fontFamily:'Poppins', fontWeight:'bold'  }}>{t('LAISSEZ NOUS VOTRE MESSAGE ')}</Typography>
-      <TextField fullWidth multiline rows={4} sx={{ bgcolor: '#371F07' }} />
+      <CustomTextField  fullWidth  multiline rows={4} sx={{ bgcolor: '#371F07' }} />
     </Grid>
     <Grid item xs={12} md={4}></Grid>
     <Grid item xs={12} md={4} sx={{ marginTop: '5px' }}>

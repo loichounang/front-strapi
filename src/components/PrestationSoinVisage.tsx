@@ -41,7 +41,7 @@ const PrestationSoinVisage = () => {
     <Grid container item>
       {( soins || []).map( (soin, idx) => (
         
-        <Grid xs={6}  md={3} key={soin.id}>
+        <Grid xs={12}  md={3} key={soin.id}>
           <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{soin.titre}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{soin.duree}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{soin.prix}</Typography>
@@ -82,7 +82,7 @@ const PrestationSoinVisage = () => {
               </Box>              
             </Stack>
           </Grid>  
-          <Grid item xs={12} md={6}> </Grid> 
+          <Grid item  md={6}> </Grid> 
     </Grid>   
     <Typography sx={{marginTop:'30px'}}></Typography>
     </Container>

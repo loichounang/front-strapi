@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 import { IPagination, ITextFilterElement } from 'components/ui/BasicTextFilterForm';
-import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire,  IOnglerie, IGaleryResultatSoins, IDefFormation, IFormation, ICoiffure, IDefRelooking, IRelookingMicropigmentation, ITestimonial, IAvis, IDefResultatSoins, IDefSpa, IQuestions } from "../models/MainInformation";
+import { IAboutPage, IArrierePlan, IAstuce, IGaleryPhoto, IIMage4Carousel, IMainInformation, IPoseGel, IPoseVernis, IReservation, ISlideImage, IDefSoinVisage, ISpecialOffer, ISpecialOfferDefintion, ISpeciality, ISpecialityDefinition, IValueDefintion, IValueSpa, ISoinVisages, IDefSoinCorps, IGommageCorps, IEpilation, ISoinMinceur, IPackageSoinsCorps, IDefBienEtre, IDefMainPied, IMassage, IVajacial, ISoinAmincissant, IEpilationCire,  IOnglerie, IGaleryResultatSoins, IDefFormation, IFormation, ICoiffure, IDefRelooking, IRelookingMicropigmentation, ITestimonial, IAvis, IDefResultatSoins, IDefSpa, IQuestions, IMainsPieds } from "../models/MainInformation";
 
 import { globalConfig } from 'config';
 import { IService } from 'features/production/models/Appointment';
@@ -210,7 +210,7 @@ const _ = () => {
       return await data;
     }
 
-    const getOnglerie = async (pagination?: IPagination) : Promise<IOnglerie[]> => {
+    const getMainsPieds = async (pagination?: IPagination) : Promise<IMainsPieds[]> => {
       const pageSize = pagination?.pageSize ?? 50;
       const pageNumber = pagination?.pageNumber ?? 1;
 
@@ -220,6 +220,15 @@ const _ = () => {
       return await data;
     }
 
+    const getOnglerie = async (pagination?: IPagination) : Promise<IOnglerie[]> => {
+      const pageSize = pagination?.pageSize ?? 50;
+      const pageNumber = pagination?.pageNumber ?? 1;
+
+      //const {name, description, phoneNumber} = criteria;
+      
+      const {data} = (await axios.get(`${globalConfig.get().apiUrl}/api/production/content/v1/${globalConfig.get().applicationApiToken}/onglerie/get-contents`));
+      return await data;
+    }
 
 
 
@@ -529,7 +538,8 @@ const _ = () => {
 
       getQuestions,
       getDefResultatSoins,
-      getDefSpaImage
+      getDefSpaImage,
+      getMainsPieds
     } 
 }
 

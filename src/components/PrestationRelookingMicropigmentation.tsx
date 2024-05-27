@@ -40,7 +40,7 @@ const PrestationRelookingMicropigmentation = () => {
   <Grid container item>
     {( Relookings || []).map( (Relooking, idx) => (
       
-      <Grid xs={6}  md={3} key={Relooking.id}>
+      <Grid xs={6}  md={4} key={Relooking.id}>
         <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{Relooking.titre}</Typography>
         <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{Relooking.duree}</Typography>
         <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{Relooking.prix}</Typography>

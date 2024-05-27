@@ -323,6 +323,13 @@ export interface IVajacial{
     prix : string
 }
 
+export interface IMainsPieds{
+    id: number;
+    titre: string;
+    duree : string;
+    prix : string
+}
+
 export interface IOnglerie{
     id: number;
     titre: string;

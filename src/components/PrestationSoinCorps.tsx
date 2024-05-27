@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import {IReservation,defaultReservation, IGommageCorps,ISoinMinceur,IEpilation,IPackageSoinsCorps } from '../features/setup/models/MainInformation'; 
+import {IReservation,defaultReservation, IGommageCorps,ISoinMinceur,IEpilation } from '../features/setup/models/MainInformation'; 
 import { Grid, Container, Typography,Stack,Box, Button } from '@mui/material';
 import useMainInformation from 'features/setup/services/MainInformation';
 import { useQuery } from 'react-query';
@@ -16,7 +16,7 @@ const PrestationSoinCorps = () => {
     const {data: gommages} = useQuery<IGommageCorps[]>( ['GommageCorps'], () => getGommageCorps());
     const {data: epilations} = useQuery<IEpilation[]>( ['Epilation'], () => getEpilationCorps());
     const {data: soins} = useQuery<ISoinMinceur[]>( ['SoinMinceur'], () => getSoinsMinceur());
-    const {data: packages} = useQuery<IPackageSoinsCorps[]>( ['PackageSoinCorps'], () => getPackageSoinCorps());
+    
     const {data: reservations} = useQuery<IReservation[]>( ['Reservation'], () => getReservations());
     const [openAppointmentForm, setOpenAppointmentForm] = useState<boolean>(false);
 
@@ -130,7 +130,7 @@ const PrestationSoinCorps = () => {
        <Grid item xs={12} md={8}>
        <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
              <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-               {t('Soins minceur')}
+               {t('Soins clinique')}
              </Typography>                
            </Box>
        </Grid>
@@ -141,7 +141,7 @@ const PrestationSoinCorps = () => {
     <Grid container item>
       {( soins || []).map( (soin, idx) => (
         
-        <Grid xs={6} md={4} key={soin.id}>
+        <Grid xs={12} md={4} key={soin.id}>
           <Typography variant='h6' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{soin.titre}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{soin.duree}</Typography>
           <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{soin.prix}</Typography>
@@ -174,52 +174,7 @@ const PrestationSoinCorps = () => {
   </Container>
 
 
-  <Container  maxWidth='xl' sx={{bgcolor:'#371F07', color:'white'}}>
-  <Grid container sx={{marginTop:'100px'}}>
-       <Grid item xs={12} md={8}>
-       <Box sx={{ mt: 1, width: '100%', display: 'flex'}}>
-             <Typography variant="h1" sx={{fontSize:'40px',marginTop:'50px'}} {...typographySmallHandWriting}> 
-               {t('Packages')}
-             </Typography>                
-           </Box>
-       </Grid>
-       <Typography sx={{marginTop:'150px'}}></Typography>
-       <Grid item xs={12} md={4}></Grid>
-     </Grid>
-    <Grid container item>
-      {( packages || []).map( (pack, idx) => (
-        
-        <Grid xs={6} md={4} key={pack.id}>
-          <Typography variant='h5' sx={{fontFamily:'Poppins', fontWeight:'bold'}}>{pack.titre}</Typography>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{pack.duree}</Typography>
-          <Typography variant='h6' sx={{fontFamily:'Poppins'}}>{pack.prix}</Typography>
-          <Typography sx={{marginTop:'13px'}}></Typography>
-        </Grid>
-        
-      ))}
-    </Grid>
-    
-    <Stack>
-    <Grid container>
-    
-    <Grid item xs={12} md={4}></Grid>
-    <Grid item xs={12} md={4} sx={{ mt: 0.5, width: '100%', display: 'flex', justifyContent: 'center'}}>
-                <Button variant="contained" onClick={() => {setOpenAppointmentForm(true);}}
-                    sx={{
-                        background:'#D85352', color:'#fff', 
-                        backgroundImage: 'linear-gradient(to right, #371F07, #DBA82F)',
-                        marginTop:'15px',fontFamily: 'Poppins !important', 
-                        width:'70%', height:'55px', borderRadius:'30px'}} >
-                  Faites votre réservation
-                </Button>
-              </Grid>
-              <Grid item xs={12} md={4}></Grid>
-              </Grid>
-              { openAppointmentForm && <AppointmentFormDialog open={openAppointmentForm} setOpen={setOpenAppointmentForm}  /> } 
-          
-  </Stack>
-  <Typography sx={{marginTop:'50px'}}></Typography>
-  </Container>
+ 
 
 
     <Grid container>
