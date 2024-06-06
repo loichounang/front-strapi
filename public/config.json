@@ -1,0 +1,12 @@
+{
+    "apiUrl": "http://skrapi-api.univ-soft.com", 
+    "applicationApiToken": "4fbsar144jfko8vfjx005ipaed",
+
+    "shineApiUrl": "https://api.univ-shine.com/shine_server", 
+    "shineToken": "s7sfnb1qk9h7pq43vibtehxgh1",
+    "shineInstanceId": "instance22",
+
+    "environement": "DEV"
+}
+
+
